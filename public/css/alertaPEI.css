@@ -1,0 +1,123 @@
+.addAlertBlock {
+    padding: 0.3rem;
+    color:#14213D ;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 2rem;
+    width: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #D0D3D8;
+    background-color: #f5f5f5;
+}
+
+.circle i {
+    color: grey;
+}
+
+.naranja {
+    background-color: #D68500;
+}
+
+.rojo {
+    background-color: #EE6546;
+}
+
+.green {
+    background-color: green;
+}
+
+
+@media screen and (min-width:768px) {
+
+    .mg {
+        margin-top: 1.5rem;
+    }
+    
+    .addAlertBlock {
+        padding: 0.3rem;
+        color:#14213D ;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        position: absolute;
+        right: 40px;
+        bottom: 2.5rem;
+        height: 2rem;
+        width: 7rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+    }
+    
+    .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #D0D3D8;
+        background-color: #f5f5f5;
+    }
+    
+    .circle i {
+        color: grey;
+    }
+    
+    .naranja {
+        background-color: #D68500;
+    }
+    
+    .rojo {
+        background-color: #EE6546;
+    }
+    
+    .green {
+        background-color: green;
+    }
+    
+}
+
+
+@media screen and (min-width:1280px) { 
+    .addAlertBlock {
+        padding: 0.3rem;
+        color:#14213D ;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        position: absolute;
+        right: 60px;
+        bottom: 2.5rem;
+        height: 2rem;
+        width: 7rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+    }
+
+}

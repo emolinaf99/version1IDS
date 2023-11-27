@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Piezas En Inspección</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Piezas en Inspección</p></div>
+            <section class="infoArea">
+                
+                <div class="contenedorTotal">
+                    <section class="contenedorOptsPEI" id="contenedorLPEI">
+                        <button class="btnPiezas" id="ingresarBtnPiezas" type="button">Ingresar Pieza a Inspección</button>
+                        <button class="btnPiezas" id="consultaBtnPiezas" type="button">Consulta</button>
+                        <button class="btnPiezas" id="alertaBtnPiezas" type="button">Alertas</button>
+                    </section>
+    
+                    <%- include('./partials/consultaPEI.ejs') %>
+                    <%- include('./partials/ingresarPEI.ejs') %>
+                    <%- include('./partials/alerta.ejs') %>
+                    
+                </div>
+
+            </section>
+        </section>
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+<!-- Script para cambiar de vistas y resaltar la vista seleccionada -->
+<script>
+    // Declarando variables
+    const infoIngresarPiezas = document.getElementById("ingresarPEIInfo");
+    const infoConsultaPiezas = document.getElementById("infoConsultaPEI");
+    const infoAlerta = document.getElementById("alertaInfo");
+    const btnPiezas = document.querySelectorAll(".btnPiezas")
+
+    // Ejecutando funciones
+    document.getElementById("ingresarBtnPiezas").addEventListener("click",()=> {mostrarInfoPiezas(infoIngresarPiezas)})
+    document.getElementById("consultaBtnPiezas").addEventListener("click",()=> {mostrarInfoPiezas(infoConsultaPiezas)})
+    document.getElementById("alertaBtnPiezas").addEventListener("click",()=> {mostrarInfoPiezas(infoAlerta)})
+
+    const arrayPiezas = [infoIngresarPiezas,infoConsultaPiezas,infoAlerta];
+
+    // Funcion para mostrar vistas y ocultar las otras
+
+    function mostrarInfoPiezas (campo) {
+        let otroArray = arrayPiezas.filter((e) => {
+            if(e != campo) {
+                return e
+            }
+        })
+        otroArray.forEach((e) => {
+            e.style.display = "none"
+        })
+        campo.style.display = "flex"
+    }
+
+    // Para que cada vez que se seleccione una etapa cambie el borde de color
+
+    btnPiezas.forEach((btn)=> {
+        btn.addEventListener("click",()=> {
+            btnPiezas.forEach(boton => {
+                boton.style.border = "1px solid #D0D3D8"
+            })
+            btn.style.border = "2px solid #5B8FC8"
+        })
+    })
+
+</script>
+
+<!-- Script para mostrar cuadro busqueda avanzada en consulta -->
+<script>
+    const cuadroBusquedaAvanzadaConsultaLPEI = document.querySelector("#busquedaAvanzadaLPEI")
+    const ventanasEmergentes = document.querySelectorAll(".contenedorFiltrar")
+    const x = document.querySelectorAll(".x")
+    const btnFiltrar = document.querySelector(".filtrarBlock")
+    const fondoOscuro = document.querySelector(".opacityVentanas")
+
+    btnFiltrar.addEventListener("click",()=> {
+        fondoOscuro.style.display = "flex"
+        cuadroBusquedaAvanzadaConsultaLPEI.style.display = "flex"
+    })
+
+    fondoOscuro.addEventListener("click",()=> {
+        ventanasEmergentes.forEach((ventana)=> {
+            ventana.style.display = "none"
+            fondoOscuro.style.display = "none"
+        })
+    })
+
+    x.forEach(una => {
+        una.addEventListener("click",()=> {
+            ventanasEmergentes.forEach((ventana)=> {
+                ventana.style.display = "none"
+                fondoOscuro.style.display = "none"
+            })
+        })
+    })
+
+
+</script>
+
+<!-- Script para mostrar cuadro busqueda avanzada en consulta Alerta -->
+<script>
+    const cuadroBusquedaAvanzadaConsultaAlertas = document.querySelector("#busquedaAvanzadaAlertas")
+    const btnFiltrar2 = document.querySelector(".filtrarBlock2")
+
+    btnFiltrar2.addEventListener("click",()=> {
+        fondoOscuro.style.display = "flex"
+        cuadroBusquedaAvanzadaConsultaAlertas.style.display = "flex"
+    })
+
+    const cuadroFormularioIngresarNuevaAlerta = document.getElementById("generarNuevaAlerta")
+    const btnNewAlert = document.querySelector(".addAlertBlock")
+
+    btnNewAlert.addEventListener("click",()=> {
+        fondoOscuro.style.display = "flex"
+        cuadroFormularioIngresarNuevaAlerta.style.display = "flex"
+    })
+
+</script>

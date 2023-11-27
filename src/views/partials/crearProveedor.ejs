@@ -1,0 +1,109 @@
+<section class="contenedorGeneralConsultaPEI" id="infoCrearProveedor">
+    <div class="contenedorFormularioIPEI margin2" id="">
+        <h1 id="h1Consulta">Crear Proveedor</h1>
+        <form class="formCrearProveedor" action="">
+            <div class="blockform">
+                <label for="">Material*</label>
+                <input class="input input100" type="text" name="" id="">
+            </div>
+            <div class="blockform">
+                <label for="">Proveedor R1*</label>
+                <input class="input input100" type="text" name="" id="">
+            </div>
+            <div class="blockform">
+                <label for="">POE/POI*</label>
+                <select class="input input100" name="" id="">
+                    <option selected hidden value="">Seleccione</option>
+                </select>
+            </div>
+            <div class="blockform">
+                <label for="">País*</label>
+                <select class="input input100" name="" id="app">
+                    <option selected disabled value="">Seleccione</option>
+                    
+                </select>
+            </div>
+            <div class="blockform">
+                <label for="">Region o Estado*</label>
+                <select class="input input100" name="" id="regionEstado">
+                    <option selected disabled value="">Seleccione</option>
+                    
+                </select>
+            </div>
+            
+            <div class="blockform">
+                <label for="">Ciudad*</label>
+                <select class="input input100" name="" id="selectCity">
+                    <option selected disabled value="">Seleccione</option>
+                </select>
+            </div>
+            <div class="blockform">
+                <label for="">Tipo*</label>
+                <select class="input input100" name="" id="">
+                    <option selected disabled value="">Seleccione</option>
+                </select>
+            </div>
+
+            <button class="btn BGgreen">Crear Proveedor</button>
+        </form>                 
+    </div>
+
+
+</section>
+
+
+<!-- El Script tiene requiere un type="module" ya que se hace uso de import para obtener el los JSON -->
+<!-- Script para consumir los json de paises, estados y ciudades y dinamisar selects segun anteriores -->
+<script type="module">
+
+    import countries from './data/countries.json' assert {type:'json'};
+    import states from './data/states.json' assert {type:'json'};
+    import cities from './data/cities.json' assert {type:'json'};
+
+    const HTMLResponse = document.querySelector('#app');
+    const selectRegion = document.querySelector("#regionEstado")
+    const selectCity = document.querySelector("#selectCity")
+
+    countries.sort().forEach(pais => {
+
+        let formatoOption = `<option value='${pais.id}' id="">${pais.name}</option>`
+        $(HTMLResponse).append(formatoOption)
+
+    });
+
+    HTMLResponse.addEventListener('change',()=> {
+
+        // Para que cada que se cambie el pais se ponga la opcion 'seleccione' en ambos inputs
+        selectRegion.selectedIndex = selectRegion.options[0]
+        selectCity.selectedIndex = selectCity.options[0]
+        selectRegion.innerHTML = `<option selected disabled class="estadosOpt" value='' id="">Seleccione</option>`
+        let valorOptionSelected = HTMLResponse.options[HTMLResponse.selectedIndex].value
+
+        states.sort().forEach(state => {
+            if(state.id_country == valorOptionSelected ) {
+                let formatoOption = `<option class="estadosOpt" value='${state.id}' id="">${state.name}</option>`
+                $(selectRegion).append(formatoOption)
+            } 
+        })
+
+    })
+
+    selectRegion.addEventListener('change',()=> {
+        selectCity.selectedIndex = selectCity.options[0]
+        selectCity.innerHTML = `<option selected disabled class="estadosOpt" value='' id="">Seleccione</option>`
+
+        let valorOptionSelected = selectRegion.options[selectRegion.selectedIndex].value
+        cities.sort().forEach(city => {
+            if(city.id_state == valorOptionSelected ) {
+                let formatoOption = `<option value='${city.id}' id="">${city.name}</option>`
+                $(selectCity).append(formatoOption)
+            }
+        })
+
+    })
+
+    
+</script>
+
+
+

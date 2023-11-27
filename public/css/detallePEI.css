@@ -1,0 +1,58 @@
+.viewInputB1 {
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 2rem;
+    width: 100%;
+    padding-left: 0.5rem;
+}
+
+.btnsDetailPEI {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.viewSelects {
+    display: none;
+}
+
+.vwB1 {
+    display: flex;
+}
+
+.bgWhite {
+    background-color: white;
+}
+
+
+@media screen and (min-width:768px) {
+    .btnsDetailPEI {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .viewInputB1 {
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        height: 2rem;
+        width: 90%;
+        padding-left: 0.5rem;
+    }
+
+    #textAreaDetailPEI {
+        width: 90%;
+    }
+}
+
+
+@media screen and (min-width:1280px) {
+    
+}

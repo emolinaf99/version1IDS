@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Funciones de Rol</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Funciones De Rol</p></div>
+            <section class="infoArea">
+                
+                <div class="contenedorTotal">
+                    <section class="contenedorOptsPEI" id="contenedorOpcionesFunRol">
+                        <button class="btnPiezas" id="btnCrearProveedor" type="button">Crear Proveedor</button>
+                        <button class="btnPiezas" id="btnCrearCotizacion" type="button">Crear Cotización</button>
+                        <button class="btnPiezas" id="btnBuscarUsuario" type="button">Buscar Usuario</button>
+                        <button class="btnPiezas" id="btnVerRoles" type="button">Gestión de Roles</button>
+                        <button class="btnPiezas" id="btnCrearUsuario" type="button">Crear Nuevo Usuario</button>
+                        
+                    </section>
+                    
+                    <%- include('./partials/crearProveedor.ejs') %>
+                    <%- include('./partials/crearUsuario.ejs') %>
+                    <%- include('./partials/crearCotizacion.ejs') %>
+                    <%- include('./partials/buscarUsuario.ejs') %>
+                    <%- include('./partials/gestionRoles.ejs') %>
+                    
+                </div>
+
+            </section>
+        </section>
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+<!-- Script para cambiar de vistas y resaltar la vista seleccionada -->
+<script>
+    // Declarando variables
+    const infoCrearProveedor = document.getElementById("infoCrearProveedor");
+    const infoCrearCotizacion = document.getElementById("infoCrearCotizacion");
+    const infoBuscarUsuario = document.getElementById("infoBuscarUsuario")
+    const infoVerRoles = document.getElementById("infoGestionRoles")
+    const infoCrearUsuario = document.getElementById("infoCrearUsuario")
+    const btnPiezas = document.querySelectorAll(".btnPiezas")
+
+    // Ejecutando funciones
+    document.getElementById("btnCrearProveedor").addEventListener("click",()=> {mostrarInfoPiezas(infoCrearProveedor)})
+    document.getElementById("btnCrearCotizacion").addEventListener("click",()=> {mostrarInfoPiezas(infoCrearCotizacion)})
+    document.getElementById("btnBuscarUsuario").addEventListener("click",()=> {mostrarInfoPiezas(infoBuscarUsuario)})
+    document.getElementById("btnVerRoles").addEventListener("click",()=> {mostrarInfoPiezas(infoVerRoles)})
+    document.getElementById("btnCrearUsuario").addEventListener("click",()=> {mostrarInfoPiezas(infoCrearUsuario)})
+
+    const arrayPiezas = [infoCrearProveedor,infoCrearUsuario, infoCrearCotizacion, infoBuscarUsuario, infoVerRoles];
+
+    // Funcion para mostrar vistas y ocultar las otras
+
+    function mostrarInfoPiezas (campo) {
+        let otroArray = arrayPiezas.filter((e) => {
+            if(e != campo) {
+                return e
+            }
+        })
+        otroArray.forEach((e) => {
+            e.style.display = "none"
+        })
+        campo.style.display = "flex"
+    }
+
+    // Para que cada vez que se seleccione una etapa cambie el borde de color
+
+    btnPiezas.forEach((btn)=> {
+        btn.addEventListener("click",()=> {
+            btnPiezas.forEach(boton => {
+                boton.style.border = "1px solid #D0D3D8"
+            })
+            btn.style.border = "2px solid #5B8FC8"
+        })
+    })
+
+</script>
+

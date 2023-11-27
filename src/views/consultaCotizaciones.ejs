@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Consulta Cotizaciones</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Consulta Cotizaciones</p></div>
+            <section class="infoArea">
+                
+                <div class="contenedorTotal">
+                    <section class="contenedorGeneralConsultaPEI" id="infoConsultaInspecciones">
+                        <div class="contenedorFormularioIPEI" id="consultaInspeccionesInfo">
+                            <h1 id="h1Consulta">Búsqueda</h1>
+                            <div class="busqueda">
+                                <div class="barraBusquedaGroup">
+                                    <input class="barraBusqueda" type="search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <button class="filtrarBlock" type="button">Filtrar<i class="fa-solid fa-filter"></i></button>
+                            </div>                                          
+                        </div>
+                        
+                        <div class="contenedorFormularioIPEI2">
+                            <div class="titlePage asd"><p>Todas</p></div> 
+                    
+                            <!-- Por cada pieza ingresada en inspección el siguiente codigo -->
+                            <div class="contenedorPEIResultado">
+                                <div class="blockResultado1 brInfo">
+                                    <div class="renglonBl">
+                                        <p class="negrita">Fecha: <span>04/02/2023</span></p>
+                                        <p class="negrita">Numero de Cotización: <span>12284357</span></p>
+                                    </div>
+                                    <div class="renglonBl">
+                                        <p class="negrita">Proveedor: <span>MAUA</span></p>
+                                        <p class="negrita">Nombre Contacto: <span>Ricardo Rodriguez</span></p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="blockResultado2 br">
+                                    <a class="btnsResultados BGblue" href="/cotizacion">Detalle</a>
+                                    <a class="btnsResultados BGgreen" href="">Confirmar</a>
+                                    <a class="btnsResultados BGred" href="">Cancelar</a>
+                                    <a class="btnsResultados BGyellow" href="">Crear OT</a>
+                                </div>
+                            </div> 
+                    
+                        </div>
+                    </section>
+                    <div class="contenedorFiltrar" id="busquedaAvanzadaInspecciones">
+                        <div class="titleMsgTemporal">
+                            <p>Búsqueda Avanzada</p>
+                            <i class="fa-solid fa-filter"></i>
+                            <p class="x">X</p>
+                        </div>
+                        <form class="formBusqueda" action="">
+                            <div class="fechaRango">
+                                <p>Fecha Entre:</p>
+                                <div class="fechaBlock">
+                                    <input class="inputBusquedaAvanzada" type="date" name="" id="">
+                                    <p>y</p>
+                                    <input class="inputBusquedaAvanzada" type="date" name="" id="">
+                                </div>
+                            </div>
+                            <div class="fechaBlock fechaBlock100">
+                                <label for="">N° Cotización:</label>
+                                <input class="inputBusquedaAvanzada" type="text" name="" id="">
+                            </div>
+                            <div class="fechaBlock fechaBlock100">
+                                <label for="">Proveedor:</label>
+                                <input class="inputBusquedaAvanzada" type="text" name="" id="">
+                            </div>
+                            <div class="fechaBlock fechaBlock100">
+                                <label for="">Nombre Contacto:</label>
+                                <input class="inputBusquedaAvanzada" type="text" name="" id="">
+                            </div>
+                    
+                            <button class="btnSearch BGblue" type="button">Generar Resultados</button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </section>
+        </section>
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+<!-- Script para mostrar cuadro busqueda avanzada en consulta de inspecciones -->
+<script>
+    const cuadroBusquedaAvanzadaConsultaInspecciones = document.querySelector("#busquedaAvanzadaInspecciones")
+    const ventanasEmergentes = document.querySelectorAll(".contenedorFiltrar")
+    const x = document.querySelectorAll(".x")
+    const btnFiltrar = document.querySelector(".filtrarBlock")
+    const fondoOscuro = document.querySelector(".opacityVentanas")
+
+    btnFiltrar.addEventListener("click",()=> {
+        fondoOscuro.style.display = "flex"
+        cuadroBusquedaAvanzadaConsultaInspecciones.style.display = "flex"
+    })
+
+    fondoOscuro.addEventListener("click",()=> {
+        ventanasEmergentes.forEach((ventana)=> {
+            ventana.style.display = "none"
+            fondoOscuro.style.display = "none"
+        })
+    })
+
+    x.forEach(una => {
+        una.addEventListener("click",()=> {
+            ventanasEmergentes.forEach((ventana)=> {
+                ventana.style.display = "none"
+                fondoOscuro.style.display = "none"
+            })
+        })
+    })
+
+
+</script>

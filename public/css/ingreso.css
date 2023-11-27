@@ -1,0 +1,192 @@
+#infoAreaHome {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 14px;
+    background-image: url(/images/FotoFondo.png) ;
+    background-size: cover;
+    height: 80vh;
+}
+
+.contenedorIngreso {
+    width: 95%;
+    background-color:#F6F6F6 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius:10px ;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius:10px  ;
+    border-top-left-radius:10px;
+    padding: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .16);
+}
+
+.contenedorIngreso h1 {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0;
+    width: 90%;
+    text-align: center;
+    border-bottom: 1px solid #D0D3D8;
+    padding-bottom: 1rem;
+}
+
+.contenedorGeneralInput {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contenedorInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contenedorInput label {
+    font-size: 16px;
+}
+
+.inputLogin {
+    height: 2rem;
+    width: 100%;
+    border-top-right-radius:5px ;
+    border-bottom-left-radius: 5px ;
+    border-bottom-right-radius:5px  ;
+    border-top-left-radius:5px;
+    border: 0.5px solid #D0D3D8;
+}
+
+.inputLogin:focus {
+    outline: none;
+}
+
+.btnIngresar {
+    height: 2rem;
+    width: 8rem;
+    padding: 0.3rem;
+    color: white;
+    border-top-right-radius:5px ;
+    border-bottom-left-radius: 5px ;
+    border-bottom-right-radius:5px  ;
+    border-top-left-radius:5px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+@media screen and (min-width:768px) {
+    .contenedorIngreso {
+        width: 70%;
+        background-color:#F6F6F6 ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top-right-radius:10px ;
+        border-bottom-left-radius: 10px ;
+        border-bottom-right-radius:10px  ;
+        border-top-left-radius:10px;
+        padding: 1rem;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, .16);
+    }
+}
+
+@media screen and (min-width:1280px) {
+    #infoAreaHome {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        font-size: 14px;
+        background-image: url(/images/FotoFondo.png) ;
+        background-size: cover;
+        height: 80vh;
+    }
+    
+    .contenedorIngreso {
+        width: 40%;
+        background-color:#F6F6F6 ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top-right-radius:10px ;
+        border-bottom-left-radius: 10px ;
+        border-bottom-right-radius:10px  ;
+        border-top-left-radius:10px;
+        padding: 1rem;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, .16);
+    }
+    
+    .contenedorIngreso h1 {
+        font-size: 26px;
+        font-weight: 400;
+        margin: 0;
+        width: 90%;
+        text-align: center;
+        border-bottom: 1px solid #D0D3D8;
+        padding-bottom: 1rem;
+    }
+    
+    .contenedorGeneralInput {
+        padding: 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .contenedorInput {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .contenedorInput label {
+        font-size: 16px;
+    }
+    
+    .inputLogin {
+        height: 2rem;
+        width: 100%;
+        border-top-right-radius:5px ;
+        border-bottom-left-radius: 5px ;
+        border-bottom-right-radius:5px  ;
+        border-top-left-radius:5px;
+        border: 0.5px solid #D0D3D8;
+    }
+    
+    .inputLogin:focus {
+        outline: none;
+    }
+    
+    .btnIngresar {
+        height: 2rem;
+        width: 8rem;
+        padding: 0.3rem;
+        color: white;
+        border-top-right-radius:5px ;
+        border-bottom-left-radius: 5px ;
+        border-bottom-right-radius:5px  ;
+        border-top-left-radius:5px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}

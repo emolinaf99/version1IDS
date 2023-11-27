@@ -1,0 +1,95 @@
+    
+<div>
+    <div class="opacity"></div>
+    <div class="opacityVentanas"></div>
+    <ul class="headerContainer">
+        <li class="burgerMenuBlock" id=""><i class="fa-solid fa-bars burgerMenuIcon" id="burgerMenu"></i></li>
+        <li class="imgContainer"><img class="imgHeader" src="/images/logoBlanco.png" alt=""></li>
+        <li class="userBlock">
+            <p class="nameUser">Nombre usuario</p>
+            <img class="userIcon" src="/images/sign-in_icon.svg" alt="">
+        </li>
+        <div class="account">
+            <a href="/perfil"><li>Perfil</li></a>
+            <a href="/cambioContrasena"><li>Cambiar Contraseña</li></a>
+            <i class="fa-solid fa-caret-up triangle"></i>
+        </div>
+    </ul>
+    <!-- Menu hamburguesa -->
+    <ul class="site-home" >
+        <i class="fa-solid fa-xmark equis" id="equisOculta"></i>
+        <a href="/formInspeccion"><li><div class="contItem"><i class="fa-solid fa-file-circle-plus iconC"></i><p>Crear Inspección</p></div></li></a>
+        <a href="/consultaInspecciones"><li><div class="contItem"><i class="fa-solid fa-magnifying-glass iconC"></i>Consultar Inspecciones</div></a></li> 
+        <a href="/consultaOtsTQC"><li><div class="contItem"><i class="iconC iconD">OT</i>Consultar Ordenes de Trabajo TQC</div></a></li>
+        <a href="/formOtInterna"><li><div class="contItem"><i class="fa-solid fa-folder-plus iconC"></i>Crear Orden de Trabajo Interna</div></a></li>
+        <a href="/consultaOtsInternas"><li><div class="contItem"><i class="fa-sharp fa-solid fa-folder-open iconC"></i>Consultar Ordenes de Trabajo Internas</div></a></li>
+        <a href="/accidentesContenedores"><li><div class="contItem"><i class="fa-solid fa-car-burst iconC"></i>Ingresar Accidente Contenedor</div></a></li>
+        <a href="/consultaAccidentes"><li><div class="contItem"><i class="fa-solid fa-memory iconC"></i>Consultar Accidentes Contenedores</div></a></li>
+        <a href="/piezasInspeccion"><li><div class="contItem"><i class="fa-solid fa-screwdriver-wrench iconC"></i>Piezas En Inspección</div></a></li>
+        <a href="/consultaCotizaciones"><li><div class="contItem"><i class="fa-sharp fa-solid fa-comment-dollar iconC"></i>Cotizaciones</div></a></li>
+        <a href="/funcionesRol"><li><div class="contItem"><i class="fa-solid fa-user-pen iconC"></i>Funciones de Rol</div></a></li>
+        <a href="/"><li><div class="contItem"><i class="fa-regular fa-bell iconC"></i>Notificaciones</div></a></li>
+    </ul>
+</div>  
+    
+<!-- Codigo para darle vida al burguer menu y a la cuenta del usuario -->
+<script>
+    const iconoMenu = document.querySelector("#burgerMenu")
+    const menu = document.querySelector(".site-home")
+    const cerrarMenu = document.querySelector(".equis")
+    const fondoOpacity = document.querySelector(".opacity")
+    const opciones = document.querySelectorAll(".site-home li")
+    const blockAccount = document.querySelector(".account")
+    const userIcon = document.querySelector(".userIcon")
+
+    blockAccount.style.display = "none"
+
+    userIcon.addEventListener("click", ()=> {
+        if(blockAccount.style.display == "none"){
+            blockAccount.style.display = "flex"
+        } else {
+            blockAccount.style.display = "none"
+        }
+    })
+
+
+    opciones.forEach((e)=> {
+        e.addEventListener("click",()=> {
+            menu.classList.remove("activeMain")
+            fondoOpacity.style.display = "none"
+        })
+    })
+    
+    iconoMenu.addEventListener("click",()=> {
+        // alternamos estilos para el menu y el body
+        menu.classList.add("activeMain")
+        fondoOpacity.style.display = "block"
+    })
+
+    cerrarMenu.addEventListener("click",()=> {
+        menu.classList.remove("activeMain")
+        fondoOpacity.style.display = "none"
+        
+    }) 
+
+    fondoOpacity.addEventListener("click",()=> {
+        menu.classList.remove("activeMain")
+        fondoOpacity.style.display = "none"
+    })
+
+    
+</script>
+
+<!-- Script es para realizar validaciones con bootstrapt FRONT -->
+<script>
+    function validarFront(form) {
+  let isValid = true; // establece la variable en verdadero
+
+  // verifica si el formulario es válido
+  if (!form.checkValidity()) {
+    isValid = false; // actualiza la variable si el formulario no es válido
+  }
+  form.classList.add('was-validated');
+  return isValid; // devuelve el valor de la variable al final de la función
+}
+</script>

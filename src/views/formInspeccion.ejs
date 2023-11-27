@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Inspección</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Inspección</p></div>
+            <section class="infoArea">
+                
+                <form class="contenedorTotal" id="contenedorTotalReporte" action="" method="POST" enctype="multipart/form-data">
+                    <section class="contenedorUnoReporte">
+
+                        <div class="bloqueGe">
+                            <div class="primerBloque">
+                                <div class="sinRef">
+                                    <label for="">Referencia*</label>
+                                    <div class="sinRefCheck" id="">
+                                        <label for="">Sin Referencia</label>
+                                        <input type="checkbox" name="" id="sinRefCheck">
+                                    </div>
+                                </div>
+                                <input class="input inpIns" type="text" name="" id="inputRefIns">
+                                <input class="input inpIns" disabled type="text" name="" id="">
+                            </div>
+                            <div class="primerBloque">
+                                <div class="sinRef">
+                                    <label for="">RAN*</label>
+                                    <div class="sinRefCheck" id="">
+                                        <label for="">Sin RAN</label>
+                                        <input type="checkbox" name="" id="sinRanCheck">
+                                    </div>
+                                </div>
+                                <input class="input inpIns" type="text" name="" id="inputRanIns">
+                                <div class="validationsRAN">
+                                    <input class="input inputMiniRAN" disabled type="text" name="" id="">
+                                    <input class="input inputMiniRAN" disabled type="text" name="" id="">
+                                    <input class="input inputMiniRAN" disabled type="text" name="" id="">
+                                    <input class="input inputMiniRAN" disabled type="text" name="" id="">
+                                    <input class="input inputMiniRAN" disabled type="text" name="" id="">
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="contenedorfd">
+                            <div class="contenedorFotos">
+                                <div class="bloqueAdj">
+                                    <p>Foto RAN Sofasa</p>
+                                    
+                                    <label class="btnAdj BGblue" for="ranSofasa"><i class="fa-solid fa-upload"></i><p>Adjuntar</p></label>
+                                    <input type="file" name="" id="ranSofasa">
+                                </div>
+                                <div class="bloqueAdj">
+                                    <p>Foto RAN Proveedor</p>
+                                    <label class="btnAdj BGblue" for="ranProveedor"><i class="fa-solid fa-upload"></i><p>Adjuntar</p></label>
+                                    <input type="file" name="" id="ranProveedor">
+                                </div>
+                                <div class="bloqueAdj">
+                                    <p>Foto Trazabilidad</p>
+                                    <label class="btnAdj BGblue" for="fotoTrazabilidad"><i class="fa-solid fa-upload"></i><p>Adjuntar</p></label>
+                                    <input type="file" name="" id="fotoTrazabilidad">
+                                </div>
+                            </div>
+                            <div class="contenedorX">
+                                <div class="bloqueInp">
+                                    <label for="">Descripción</label>
+                                    <input disabled class="input inpIns" type="text" name="" id="">
+                                </div>
+                                <div class="bloqueInp">
+                                    <label for="">Nota</label>
+                                    <input disabled class="input inpIns" type="text" name="" id="">
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <button class="btn BGgreen">Iniciar Inspección</button>
+
+                        <div class="motInsp">
+                            <label for="">Motivo de Inspección</label>
+                            <select class="selMotInsp" name="" id="">
+                                <option selected value="">Seleccione Motivo Inspección</option>
+                                <option value="">Inspección Estandar</option>
+                                <option value="">Pieza de Linea</option>
+                                <option value="">Accidente CKD</option>
+                                <option value="">Accidente AEREO</option>
+                                <option value="">Accidente SUPLA</option>
+                                <option value="">Accidente SM&M</option>
+                                <option value="">Inspección Especial</option>
+                            </select>
+                        </div>
+
+                        <div class="motInsp">
+                            
+                            <div class="contenedorCompa">
+                                <p>Compañeros:</p>
+                            </div>
+                            <div class="comp">
+                                <div class="plusBlock" id="plusBlockInspeccion">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                                <p>Añadir Compañero</p>
+                            </div>
+                            <div class="contenedorFiltrar" id="añadirCompañero">
+                                <div class="titleMsgTemporal">
+                                    <p>Añadir Compañero</p>
+        
+                                    <p class="x">X</p>
+                                </div>
+                                <select class="selectCompa input" name="" id="">
+                                    <option selected disabled hidden value="">Seleccione Compañero</option>
+                                    <option value="">Pepegrillo</option>
+                                    <option value="">Benito</option>
+                                    <option value="">Salomon</option>
+                                </select>
+                                <button type="button" class="btnAdj2 BGgreen addBtnCompa">Agregar</button>
+                            </div>
+                            
+                        </div>
+                        
+
+                    </section>
+                    <section class="contenedorDosReporte">
+                        <embed src="/pdf/gamaEjemplo.pdf" width="100%" height="500" alt="pdf" type="application/pdf">
+                    </section>
+                    <section class="contenedorTresReporte">
+                        <div class="resultsBlock">
+                            <div class="blockInputsReport">
+                                <label for="">Piezas Inspeccionadas</label>
+                                <input class="input " type="number" name="" id="">
+                            </div>
+                            <div class="blockInputsReport">
+                                <label for="">Piezas Recuperadas</label>
+                                <input class="input " type="number" name="" id="">
+                            </div>
+                            <div class="blockInputsReport">
+                                <label for="">Piezas Rechazadas</label>
+                                <input class="input " type="number" name="" id="piezasRecha" value="">
+                            </div>
+                        </div>
+                        <div class="infoRechazo">
+                            <h3>Información de Rechazo</h3>
+                            <div class="resultsBlock">
+                                <div class="blockInputsReport">
+                                    <label for="">Almacén</label>
+                                    <select class="input" name="" id="">
+                                        <option hidden selected disabled value="">Seleccione Almacén</option>
+                                        <option value="">E004</option>
+                                        <option value="">E006</option>
+                                        <option value="">ELIN</option>
+                                    </select>
+                                </div>
+                                <div class="blockInputsReport">
+                                    <label for="">Destino Rechazo</label>
+                                    <select class="input" name="" id="selectDestRe">
+                                        <option hidden selected disabled value="">Seleccione Destino</option>
+                                        <option value="">A Chatarra Cargo Sofasa</option>
+                                        <option value="">A Chatarra Cargo Tercero</option>
+                                        <option value="">Bloqueo 322</option>
+                                    </select>
+                                </div>
+                            </div>  
+                            <div class="resultsBlock">
+                                <div class="blockInputsReport">
+                                    <label for="">Familia</label>
+                                    <select class="input" name="" id="">
+                                        <option hidden selected disabled value="">Seleccione Familia</option>
+                                        <option value="">B52</option>
+                                        <option value="">L52</option>
+                                        <option value="">HJD</option>
+                                    </select>
+                                </div>
+                                <div class="blockInputsReport">
+                                    <label for="">Taller</label>
+                                    <select class="input" name="" id="">
+                                        <option hidden selected disabled value="">Seleccione Taller</option>
+                                        <option value="">Ensamble</option>
+                                        <option value="">Soldadura</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="resultsBlock">
+                                <div class="blockInputsReport">
+                                    <label for="">Causa</label>
+                                    <select class="input" name="" id="selectCausa">
+                                        <option hidden selected disabled value="">Seleccione Causa</option>
+                                        <option value="" id="danoEnProcesos">Daño en Procesos</option>
+                                        <option value="" id="danoTerceros">Daño con Cargo a Terceros</option>
+                                        <option value="" id="ensayos">Ensayos (Compras e Ingeniería)</option>
+                                        <option value="" id="noConDefPiezas">No Conforme Calidad Defecto Pieza</option>
+                                        <option value="" id="noConDefOxido">No Conforme Calidad Defecto Oxido</option>
+                                        <option value="" id="noConDetEmb">No Conforme Calidad Deteropro Embalaje</option>
+                                        <option value="" id="noConLogistico">No Conforme Logístico</option>
+                                    </select>
+                                </div>
+                                <div class="blockInputsReport">
+                                    <label for="">Tipo-Causa</label>
+                                    <select class="input" name="" id="tipoCausa">
+
+                                        <option hidden selected disabled value="">Seleccione Tipo-Causa</option>
+                                        <option hidden class="danoEnProcesos" value="">Defecto de Aspecto</option>
+                                        <option hidden class="danoEnProcesos" value="">Defecto de Estanqueidad</option>
+                                        <option hidden class="danoEnProcesos" value="">Defecto de Ruido (Durante Prueba Rodaje)</option>
+                                        <option hidden class="danoEnProcesos" value="">Defecto Manipulación</option>
+                                        <option hidden class="danoEnProcesos" value="">Carencia de Material</option>
+                                        <option hidden class="danoEnProcesos" value="">Det. Embalaje Transporte Externo Terrestre</option>
+                                        <option hidden class="danoEnProcesos" value="">Det. Embalaje Transporte Externo Maritimo</option>
+                                        <option hidden class="danoEnProcesos" value="">Deterioro Embalaje Transporte Interno</option>
+                                        <option hidden class="danoEnProcesos" value="">Obsoleto</option>
+                                        <option hidden class="danoEnProcesos" value="">Perdida en Proceso</option>
+
+                                        <option hidden class="danoTerceros" value="">Defecto en Aspecto</option>
+                                        <option hidden class="danoTerceros" value="">Defecto de Funcionamiento</option>
+                                        <option hidden class="danoTerceros" value="">Defecto de Estanqueidad</option>
+                                        <option hidden class="danoTerceros" value="">Defecto de Ruido (Durante Prueba Rodaje)</option>
+                                        <option hidden class="danoTerceros" value="">Defecto Manipulación</option>
+                                        <option hidden class="danoTerceros" value="">Carencia de Material</option>
+                                        <option hidden class="danoTerceros" value="">Det. Embalaje Transporte Externo Terrestre</option>
+                                        <option hidden class="dañoTerceros" value="">Det. Embalaje Transporte Externo Maritimo</option>
+                                        <option hidden class="danoTerceros" value="">Daño Operador Logístico</option>
+                                        <option hidden class="danoTerceros" value="">Daño Montacargas</option>
+
+                                        <option hidden class="ensayos" value="">.</option>
+                                        <option hidden class="ensayos" value="">Ensayo Destructivo</option>
+
+                                        <option hidden class="noConDefPiezas" value="">Defecto de Aspecto</option>
+                                        <option hidden class="noConDefPiezas" value="">Defecto de Funcionamiento</option>
+                                        <option hidden class="noConDefPiezas" value="">Defecto de Estanqueidad</option>
+                                        <option hidden class="noConDefPiezas" value="">Defecto de Ruido (Durante Prueba Rodaje)</option>
+                                        <option hidden class="noConDefPiezas" value="">Defecto Carencia de Material</option>
+                                        <option hidden class="noConDefPiezas" value="">Defecto Manipulación</option>
+                                        <option hidden class="noConDefPiezas" value="">Defecto de Geometría</option>
+
+                                        <option hidden class="noconDefOxido" value="">Oxído</option>
+
+                                        <option hidden class="noConDetEmb" value="">Deterioro Embajale Concepción</option>
+
+                                        <option hidden class="noConLogistico" value="">Sobrante Útil (No Hay Como Hacer Movimiento)</option>
+                                        <option hidden class="noConLogistico" value="">Sobrante No Útil</option>
+                                        <option hidden class="noConLogistico" value="">Faltante Parcial</option>
+                                        <option hidden class="noConLogistico" value="">Faltante Total</option>
+                                        <option hidden class="noConLogistico" value="">Error Referencia</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="resultsBlock" id="RBRescha">
+                                <div class="blockInputsReport">
+                                    <label for="">Observación</label>
+                                    <textarea class="textArea" name="" id="" cols="50%" rows="3"></textarea>
+                                </div>
+                                <div class="blockInputsReport" id="selRespon">
+                                    <label for="">Responsable de Rechazo</label>
+                                    <select class="input" name="" id="selectRes">
+                                        <option hidden selected disabled value="">Seleccione Responsable</option>
+                                        <option value="">CKD</option>
+                                        <option value="">Fabrica Nacional de Autopartes S.A.</option>
+                                        <option value="">SM y M Logistica S.A.S.</option>
+                                        <option value="">Riduco S.A.</option>
+                                        <option value="">Industrias NorteCaucanas S.A.S.</option>
+                                        <option value="">Gabriel De Colombia S.A.</option>
+                                        <option value="">Industrias Metalicas JB S.A.S</option>
+
+                                        
+                                    </select>
+                                </div>
+                                <div class="blockInputsReport" id="inpRespon">
+                                    <label for="">Responsable de Rechazo</label>
+                                    <input class="input" type="text" name="" id="inputRes">
+                                </div>
+                                <input hidden type="text" name="" id="realResponsableRecha" value="">
+                            </div>
+                        </div>
+                            
+
+                        <div class="defectosBlock">
+                            <div class="numeroDefectos">
+                                <label for="">Defectos</label>
+                                <div class="espacioDef">
+
+                                </div>
+                                <div class="def">
+                                    <div class="plusBlock" id="plusBlockInspeccion">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                    <p>Añadir Defecto</p>
+                                </div>
+                                
+                            </div>
+                            <div class="contenedorFiltrar" id="añadirDef">
+                                <div class="titleMsgTemporal">
+                                    <p>Añadir Defecto</p>
+        
+                                    <p class="x x2">X</p>
+                                </div>
+                                <label class="btnAdj BGblue" for="defFile">Adjuntar Foto</label>
+                                <input hidden multiple accept="image/*" class="input" type="file" name="" id="defFile">
+                                <button class="btnAdj2 BGgreen addBtnCompa">Agregar</button>
+                            </div>
+                        </div>
+                        
+                        <button class="btn BGgreen" type="button">Finalizar Inspección</button>
+                    </section>
+                    
+                    
+                </form>
+
+            </section>
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+<!-- Script para agregar defectos -->
+<script>
+    const btnAddDefecto = document.querySelector(".def")
+    const espacioDefectos = document.querySelector('.espacioDef')
+
+    
+    var contador = 0
+    var arrayDef = []
+    var arrayNumeros = []
+    
+    function acomodarDefecto() {
+        //console.log(arrayDef);
+        //console.log(arrayNumeros);
+        let defectosBloques = document.querySelectorAll('.blockDef')
+
+        for (let i = 0; i < arrayDef.length; i++) {
+            
+           if(arrayDef[i] != arrayNumeros[i]) {
+
+                defectosBloques.forEach(bloque => {
+
+                    let numberDefect = bloque.childNodes[1].innerText.split('Defecto ')[1]
+                    if(numberDefect == arrayDef[i]) {
+                        bloque.childNodes[1].innerText = 'Defecto ' + arrayNumeros[i]
+                    }
+                })
+           }
+        }
+        arrayDef = arrayNumeros
+
+    }
+
+    function borrarDefecto(boton) {
+        const contPadre = boton.parentNode;
+        contPadre.remove(contPadre)
+
+        const splitDefecto = contPadre.childNodes[1].textContent.split('Defecto ')[1]
+
+        let newArrayDef = arrayDef.filter(valor => valor != splitDefecto)
+        arrayDef = newArrayDef
+
+        contador = contador -1
+
+        arrayNumeros = []
+
+        for (let i = 0; i < contador; i++) {
+            arrayNumeros.push(i + 1)
+            
+        }
+        //console.log(arrayNumeros);
+        //console.log(arrayDef);
+        //console.log(contador);
+
+        acomodarDefecto()
+    }
+    
+    btnAddDefecto.addEventListener('click',()=> {
+
+        acomodarDefecto()
+        contador = contador + 1
+        arrayDef.push(contador)   
+
+        arrayNumeros = []
+
+        for (let i = 0; i < contador; i++) {
+            arrayNumeros.push(i + 1)
+            
+        }
+        //console.log(arrayNumeros);
+        //console.log(arrayDef);  
+        //console.log(contador);
+        const ultimoElemento = arrayDef[arrayDef.length -1]
+
+        let formatoDefecto = 
+            `
+            <div class="blockDef">
+                <p class="" id="">Defecto ${ultimoElemento}</p>
+                <input multiple accept="" class="" type="file" name="" id="" value="">
+                <div class="minusBl" onclick="borrarDefecto(this)">
+                    <i class="fa-solid fa-minus red"></i>
+                </div>
+            </div>
+            `
+        $(espacioDefectos).append(formatoDefecto);
+    })
+</script>
+
+<!-- Script para que al seleccionar Causa muestre Tipos de Causa -->
+<script>
+    
+    const selectCausa = document.querySelector("#selectCausa")
+    const selectTipoCausa = document.querySelector("#tipoCausa")
+    const danoEnProcesos = document.querySelectorAll(".danoEnProcesos")
+    const danoTerceros = document.querySelectorAll(".danoTerceros")
+    const ensayos = document.querySelectorAll(".ensayos")
+    const noConDefPiezas= document.querySelectorAll(".noConDefPiezas")
+    const noConDefOxido= document.querySelectorAll(".noConDefOxido")
+    const noConDetEmb = document.querySelectorAll(".noConDetEmb")
+    const noConLogistico = document.querySelectorAll(".noConLogistico")
+
+    let arrayX = [danoEnProcesos,danoTerceros,ensayos,noConDefPiezas,noConDefOxido,noConDetEmb,noConLogistico]
+
+    function mostrar(campo) {
+        let otroArray = arrayX.filter((e)=> {
+            if(e != campo) {
+                return e
+            }
+
+        })
+        otroArray.forEach((e)=> {
+            e.forEach(element => {
+                element.setAttribute('hidden','')
+            })
+            
+        })
+        campo.forEach(elemento => {
+            elemento.removeAttribute('hidden')
+        })
+        
+    }
+    
+    selectCausa.addEventListener('change',()=> {
+        const valorSelectedId = selectCausa.options[selectCausa.selectedIndex].id
+        selectTipoCausa.options[selectTipoCausa.selectedIndex].text = 'Seleccione Tipo Causa'
+
+        if(valorSelectedId == 'danoEnProcesos') {
+            mostrar(danoEnProcesos)
+        } else if (valorSelectedId == 'danoTerceros') {
+            mostrar(danoTerceros)
+        } else if (valorSelectedId == 'ensayos') {
+            mostrar(ensayos)
+        } else if (valorSelectedId == 'noConDefPiezas') {
+            mostrar(noConDefPiezas)
+        } else if (valorSelectedId == 'noConDefOxido') {
+           mostrar(noConDefOxido)
+        } else if (valorSelectedId == 'noConDetEmb') {
+            mostrar(noConDetEmb)
+        } else if (valorSelectedId == 'noConLogistico') {
+            mostrar(noConLogistico)
+        } else {
+            selectCausa.options.forEach(option => {
+                option.setAttribute('hidden','')
+            })
+        }
+
+        
+    })
+
+</script>
+
+<!-- Script para que según Destino Rechazo muestre Responsable de Rechazo (input o select) -->
+<script>
+    const destinoRechazo = document.querySelector('#selectDestRe')
+    const blockInputResponsable = document.querySelector('#inpRespon')
+    const inputRes = document.querySelector('#inputRes')
+    const blockSelectResponsable = document.querySelector("#selRespon")
+    const selectRes = document.querySelector("#selectRes")
+    const realInputResponsableRechazo = document.querySelector('#realResponsableRecha')
+
+    
+    if(destinoRechazo.options[destinoRechazo.selectedIndex].text == 'Seleccione Destino') {
+        blockInputResponsable.style.display = 'flex'
+        inputRes.setAttribute('disabled','')
+        blockSelectResponsable.style.display = 'none'
+    }
+
+    inputRes.addEventListener('change',() => {
+        realInputResponsableRechazo.value = inputRes.value
+    })
+
+    selectRes.addEventListener('change',()=> {   
+        realInputResponsableRechazo.value = selectRes.options[selectRes.selectedIndex].text;
+    })
+    
+
+    
+    destinoRechazo.addEventListener('change',()=> {
+        const seleccionDesRe = destinoRechazo.options[destinoRechazo.selectedIndex].text;
+        realInputResponsableRechazo.value = ''
+        if(seleccionDesRe == 'A Chatarra Cargo Sofasa') {
+            blockInputResponsable.style.display = 'flex'
+            inputRes.removeAttribute('disabled','')
+            blockSelectResponsable.style.display = 'none'
+        } else if( seleccionDesRe == 'A Chatarra Cargo Tercero') {
+            blockInputResponsable.style.display = 'none'
+            inputRes.setAttribute('disabled','')
+            blockSelectResponsable.style.display = 'flex'
+        } else if(seleccionDesRe == 'Bloqueo 322') {
+            blockInputResponsable.style.display = 'none'
+            inputRes.setAttribute('disabled','')
+            blockSelectResponsable.style.display = 'flex'
+        } 
+    })
+
+</script>
+
+<!-- Script para bloquear inputs Sin Referencia y Sin RAN -->
+<script>
+    const checkNoRef = document.querySelector("#sinRefCheck")
+    const checkNoRan = document.querySelector("#sinRanCheck")
+    const inputRef = document.querySelector("#inputRefIns")
+    const inputRan = document.querySelector("#inputRanIns")
+
+    checkNoRef.addEventListener('change', validationCheck, false);
+    checkNoRan.addEventListener('change', validationCheck2, false);
+
+    function validationCheck() {
+    
+        var checked = checkNoRef.checked;
+        if(checked){
+            inputRef.setAttribute('disabled','')
+            inputRef.value = 'N/A'
+        } else {
+            inputRef.removeAttribute('disabled','')
+            inputRef.value = ''
+        }
+    }
+    function validationCheck2() {
+    
+        var checked = checkNoRan.checked;
+        if(checked){
+            inputRan.setAttribute('disabled','')
+            inputRan.value = 'N/A'
+        } else {
+            inputRan.removeAttribute('disabled','')
+            inputRan.value = ''
+        }
+    }
+
+    
+</script>
+
+<!-- Script para que, en el caso de existir más de una pieza rechazada -->
+<script>
+    const piezasRechazadas = document.querySelector("#piezasRecha")
+    const infoRechazo = document.querySelector(".infoRechazo")
+
+    piezasRechazadas.addEventListener('change',() => {
+        if(piezasRechazadas.value != 0) {
+            infoRechazo.style.display = 'block'
+        } else {
+            infoRechazo.style.display = 'none'
+        }
+    })
+</script>
+
+<!-- Script para agregar un nuevo compañero al div o eliminarlo -->
+<script>
+    const espacioCompaneros = document.querySelector(".contenedorCompa")
+    const plusBoton = document.querySelector(".addBtnCompa")
+    const selectCompa = document.querySelector(".selectCompa")
+    
+    let companerosInHTML = []
+
+    plusBoton.addEventListener("click",()=> {
+
+        const valorSelect = selectCompa.options[selectCompa.selectedIndex].text;
+        
+        
+
+        if(!companerosInHTML.includes(valorSelect)) {
+            companerosInHTML.push(valorSelect)
+
+            let formatoCompanero = 
+            `
+            <div class="blockCompa">
+                <input type="text" name="" id="" value="${valorSelect}">
+                <div class="minusBl">
+                    <i class="fa-solid fa-minus red"></i>
+                </div>
+            </div>
+            `
+            $(espacioCompaneros).append(formatoCompanero);
+        }
+
+        let botonesMinus = document.querySelectorAll(".minusBl")
+
+        botonesMinus.forEach(boton => {
+            boton.addEventListener("click",()=> {
+                const contPadre = boton.parentNode;
+                const valorSelectCont = contPadre.childNodes[1].value
+
+                const newArray = companerosInHTML.filter(valor => valor != valorSelectCont)
+                companerosInHTML = newArray;
+
+                contPadre.remove(contPadre)
+            })
+        })
+        
+    });
+
+    
+    
+</script>
+
+<!-- Script para Añadir Compañero -->
+<script>
+    const addUsers = document.querySelector(".comp")
+    const contenedorCompañero = document.querySelector("#añadirCompañero")
+    const equisComp = document.querySelector('.x')
+    const btnAdd = document.querySelector('.addBtnCompa')
+
+    addUsers.addEventListener('click',()=> {
+        contenedorCompañero.style.display = 'flex'
+        fondoOpacity.style.display = 'flex'
+    })
+
+    // Para cerrar el cuadro de añadir compañero
+
+    btnAdd.addEventListener('click',()=> {
+        contenedorCompañero.style.display = 'none'
+        fondoOpacity.style.display = 'none'
+
+    })
+
+    equisComp.addEventListener('click',()=> {
+        contenedorCompañero.style.display = 'none'
+        fondoOpacity.style.display = 'none'
+    })
+
+    fondoOpacity.addEventListener('click',()=> {
+        contenedorCompañero.style.display = 'none'
+        fondoOpacity.style.display = 'none'
+    })
+
+    
+
+</script>
+

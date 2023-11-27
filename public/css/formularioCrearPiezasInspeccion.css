@@ -1,0 +1,1025 @@
+.totalArea {
+    width: 100vw;
+}
+
+.infoArea {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color:#f5f5f5 ;
+    padding: 2rem 0rem;
+    min-height: 71vh;
+}
+
+.contenedorFormularioIPEI > h1 {
+    font-weight: 600;
+}
+
+.titlePage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #14213D;
+    width: 100%;
+    color: white;
+    top: 0.5rem;
+    position: relative;
+    padding: 0.3rem;
+    font-size: 16px;
+    min-height: 2.2rem;
+    text-align: center;
+}
+
+.contenedorTotal {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#FCFCFC ;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-bottom: 2rem;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+}
+
+#ingresarPEIInfo {
+    display: none;
+    padding-top: 1rem;
+}
+
+#alertaInfo {
+    display: none;
+}
+
+#consultaPEIInfo {
+    display: flex;
+}
+
+.contenedorOptsPEI {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #D0D3D8;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 5rem;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
+}
+
+#contenedorLPEI {
+    display: grid;
+    grid-template-columns: 8rem 8rem;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.contenedorOptsPEI button {
+    padding: 0.5rem;
+    border: 1px solid #D0D3D8;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: #F6F6F6;
+    font-size: 16px;
+    width: 8rem;
+    font-weight: 300;
+    height: 3.5rem;
+    cursor: pointer;
+}
+
+.contenedorFormularioIPEI {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.contenedorFormularioIPEI2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0rem;
+}
+
+.contenedorFormularioIPEI h1 {
+    font-size: 18px;
+    margin-bottom: 2rem;
+    color: #14213D;
+}
+
+.formIPEI {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    gap: 2rem;
+}
+
+.formIPEI select:focus {
+    outline: none;
+}
+
+.b1FormIPEI {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.blockB1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.labelB1 {
+    width: 100%;
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+.inputB1 {
+    border: 1px solid #D0D3D8;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 2rem;
+    width: 100%;
+    padding-left: 0.5rem;
+}
+
+.formIPEI input:focus {
+    outline: none;
+}
+
+.textAreaDef {
+    width: 100%;
+    border: 1px solid #D0D3D8;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.textAreaDef:focus {
+    outline: none;
+}
+
+#b2FormIPEI {
+    align-items: flex-start;
+}
+
+.vx {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    gap: 2rem;
+}
+
+#b2FormIPEI2 {
+    justify-content: flex-start;
+    top: 4rem;
+    left: 5px;
+    width: 100%;
+}
+
+#b2FormIPEI3 {
+    justify-content: flex-start;
+    top: 8rem;
+    left: 5px;
+    width: 100%;
+}
+
+.b3FormIPEI {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.inpRadioContainer {
+    width:100% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.labelRadio {
+    width: 100%;
+}
+
+.inputRadio {
+    width:1rem;
+    height: 1rem;
+}
+
+.blockLabel {
+    width: 50%;
+    padding: 0.5rem 2rem;
+    background-color: #f5f5f5;
+}
+
+#blockLabelTransparent {
+    background-color: transparent;
+}
+
+#blockInputTransparent {
+    background-color: transparent;
+}
+
+.blockInputs {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.inpRadioBlock {
+    display: flex;
+    width: 100%;
+}
+
+.contCheckBox {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.blockCheckBox {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.checkRadio {
+    width: 20px;
+    height: 20px;
+}
+
+.sec2Right {
+    width: 100%; 
+    display: flex;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.containerX {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.blockB1-2 {
+    width: 100%;
+}
+
+.notContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.botonCrear {
+    padding: 0.3rem;
+    height: 2rem;
+    width: 15rem;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+@media screen and (min-width:768px) {
+    #contenedorLPEI {
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    .contenedorOptsPEI button {
+        padding: 0.5rem;
+        border: 1px solid #D0D3D8;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        background-color: #F6F6F6;
+        font-size: 16px;
+        width: 10rem;
+        font-weight: 300;
+        height: 3.5rem;
+    }
+
+    .infoArea {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color:#f5f5f5 ;
+        padding: 2rem 1rem;
+        min-height: 71vh;
+    }
+    .totalArea {
+        width: 100vw;
+    }
+    
+    .titlePage {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #14213D;
+        width: 100%;
+        color: white;
+        top: 0.5rem;
+        position: relative;
+        padding: 0.3rem;
+        font-size: 16px;
+        height: 2.2rem;
+    }
+    
+    .contenedorTotal {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:#FCFCFC ;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    }
+    
+    #ingresarPEIInfo {
+        display: none;
+    }
+    
+    #alertaInfo {
+        display: none;
+    }
+    
+    #consultaPEIInfo {
+        display: flex;
+    }
+    
+    .contenedorOptsPEI {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        border-bottom: 1px solid #D0D3D8;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        height: 5rem;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
+    }
+    
+    .contenedorFormularioIPEI {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+        padding-top: 0;
+    }
+    
+    .contenedorFormularioIPEI2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0rem;
+    }
+    
+    .contenedorFormularioIPEI h1 {
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+    
+    .formIPEI {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        gap: 3rem;
+    }
+    
+    .formIPEI select:focus {
+        outline: none;
+    }
+    
+    .b1FormIPEI {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+    
+    .blockB1 {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    .labelB1 {
+        width: 90%;
+        text-align: left;
+        padding-left: 0.5rem;
+    }
+    
+    .inputB1 {
+        border: 1px solid #D0D3D8;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        height: 2rem;
+        width: 90%;
+        padding-left: 0.5rem;
+    }
+    
+    .formIPEI input:focus {
+        outline: none;
+    }
+    
+    .textAreaDef {
+        width: 90%;
+        border: 1px solid #D0D3D8;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    
+    .textAreaDef:focus {
+        outline: none;
+    }
+    
+    #b2FormIPEI {
+        align-items: flex-start;
+    }
+    
+    .vx {
+        width: 100%;
+        position: relative;
+        gap: 0rem;
+    }
+    
+    #b2FormIPEI2 {
+        justify-content: flex-start;
+        position: absolute;
+        top: 4rem;
+        left: 5px;
+        width: 100%;
+    }
+    
+    #b2FormIPEI3 {
+        justify-content: flex-start;
+        position: absolute;
+        top: 8rem;
+        left: 5px;
+        width: 100%;
+        gap: 0rem;
+    }
+    
+    .b3FormIPEI {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .inpRadioContainer {
+        width:65% ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+    
+    .labelRadio {
+        width: 100%;
+    }
+    
+    .inputRadio {
+        width:1rem;
+        height: 1rem;
+    }
+    
+    .blockLabel {
+        width: 50%;
+        padding: 0.5rem 2rem;
+        background-color: #f5f5f5;
+    }
+    
+    #blockLabelTransparent {
+        background-color: transparent;
+    }
+    
+    #blockInputTransparent {
+        background-color: transparent;
+    }
+    
+    .blockInputs {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #f5f5f5;
+    }
+    
+    .inpRadioBlock {
+        display: flex;
+        width: 100%;
+    }
+    
+    .contCheckBox {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .blockCheckBox {
+        display: flex;
+        flex-direction: row;
+        width: 20%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .checkRadio {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .sec2Right {
+        width: 33%; 
+        display: flex;   
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .containerX {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    .blockB1-2 {
+        width: 100%;
+    }
+    
+    .notContainer {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 1.5rem;
+    }
+    
+    .botonCrear {
+        padding: 0.3rem;
+        height: 2rem;
+        width: 13rem;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        color: white;
+        font-size: 16px;
+    }
+
+}
+
+
+@media screen and (min-width:1280px){
+
+    .infoArea {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color:#f5f5f5 ;
+        padding: 2rem 1rem;
+        min-height: 71vh;
+    }
+    .totalArea {
+        width: 100vw;
+    }
+    
+    .titlePage {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #14213D;
+        width: 100%;
+        color: white;
+        top: 0.5rem;
+        position: relative;
+        padding: 0.3rem;
+        font-size: 16px;
+        height: 2.2rem;
+    }
+    
+    .contenedorTotal {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:#FCFCFC ;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    }
+
+    #contenedorLPEI {
+        display: grid;
+        grid-template-columns: 15rem 15rem 15rem;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    
+    #ingresarPEIInfo {
+        display: none;
+    }
+    
+    #alertaInfo {
+        display: none;
+    }
+    
+    #consultaPEIInfo {
+        display: flex;
+    }
+    
+    .contenedorOptsPEI {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        border-bottom: 1px solid #D0D3D8;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        height: 5rem;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
+    }
+    
+    .contenedorOptsPEI button {
+        padding: 0.5rem;
+        border: 1px solid #D0D3D8;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        background-color: #F6F6F6;
+        font-size: 16px;
+        width: 15rem;
+        font-weight: 300;
+        height: auto;
+    }
+    
+    .contenedorFormularioIPEI {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+        padding-top: 0;
+    }
+    
+    .contenedorFormularioIPEI2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0rem;
+    }
+    
+    .contenedorFormularioIPEI h1 {
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+    
+    .formIPEI {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        gap: 3rem;
+    }
+    
+    .formIPEI select:focus {
+        outline: none;
+    }
+    
+    .b1FormIPEI {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+    
+    .blockB1 {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    
+    .labelB1 {
+        width: 90%;
+        text-align: left;
+        padding-left: 0.5rem;
+    }
+    
+    .inputB1 {
+        border: 1px solid #D0D3D8;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        height: 2rem;
+        width: 90%;
+        padding-left: 0.5rem;
+    }
+    
+    .formIPEI input:focus {
+        outline: none;
+    }
+    
+    .textAreaDef {
+        width: 90%;
+        border: 1px solid #D0D3D8;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    
+    .textAreaDef:focus {
+        outline: none;
+    }
+    
+    #b2FormIPEI {
+        align-items: flex-start;
+    }
+    
+    .vx {
+        width: 100%;
+        position: relative;
+        gap: 0rem;
+    }
+    
+    #b2FormIPEI2 {
+        justify-content: flex-start;
+        position: absolute;
+        top: 4rem;
+        left: 5px;
+        width: 100%;
+    }
+    
+    #b2FormIPEI3 {
+        justify-content: flex-start;
+        position: absolute;
+        top: 8rem;
+        left: 5px;
+        width: 100%;
+        gap: 0rem;
+    }
+    
+    .b3FormIPEI {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .inpRadioContainer {
+        width:65% ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+    
+    .labelRadio {
+        width: 100%;
+    }
+    
+    .inputRadio {
+        width:1rem;
+        height: 1rem;
+    }
+    
+    .blockLabel {
+        width: 50%;
+        padding: 0.5rem 2rem;
+        background-color: #f5f5f5;
+    }
+    
+    #blockLabelTransparent {
+        background-color: transparent;
+    }
+    
+    #blockInputTransparent {
+        background-color: transparent;
+    }
+    
+    .blockInputs {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #f5f5f5;
+    }
+    
+    .inpRadioBlock {
+        display: flex;
+        width: 100%;
+    }
+    
+    .contCheckBox {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .blockCheckBox {
+        display: flex;
+        flex-direction: row;
+        width: 20%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .checkRadio {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .sec2Right {
+        width: 33%; 
+        display: flex;   
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .containerX {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    .blockB1-2 {
+        width: 100%;
+    }
+    
+    .notContainer {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 1.5rem;
+    }
+    
+    .botonCrear {
+        padding: 0.3rem;
+        height: 2rem;
+        width: 15rem;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        color: white;
+        font-size: 16px;
+    }
+
+}
+

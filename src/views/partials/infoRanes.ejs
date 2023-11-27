@@ -1,0 +1,179 @@
+<section class="infoRanes" id="infoRanes">
+    <div class="contPendientesE1">
+        <div class="blockE1">
+            <div class="infoString">
+                <p>Numero Contenedor: <span>731D19345</span></p>
+                <p>Numero Arrume: <span>4</span></p>
+            </div>
+            <button class="btnAdj2 BGblue">Continuar</button>
+        </div>
+        <div class="blockE1">
+            <div class="infoString">
+                <p>Numero Contenedor: <span>7934D19789</span></p>
+                <p>Numero Arrume: <span>5</span></p>
+            </div>
+            <button class="btnAdj2 BGblue">Continuar</button>
+        </div>
+        <div class="blockE1">
+            <div class="infoString">
+                <p>Numero Contenedor: <span>731D19345</span></p>
+                <p>Numero Arrume: <span>4</span></p>
+            </div>
+            <button class="btnAdj2 BGblue">Continuar</button>
+        </div>
+        <div class="blockE1">
+            <div class="infoString">
+                <p>Numero Contenedor: <span>731D19345</span></p>
+                <p>Numero Arrume: <span>4</span></p>
+            </div>
+            <button class="btnAdj2 BGblue">Continuar</button>
+        </div>
+        <div class="blockE1">
+            <div class="infoString">
+                <p>Numero Contenedor: <span>731D19345</span></p>
+                <p>Numero Arrume: <span>4</span></p>
+            </div>
+            <button class="btnAdj2 BGblue">Continuar</button>
+        </div>
+        <div class="blockE1">
+            <div class="infoString">
+                <p>Numero Contenedor: <span>731D19345</span></p>
+                <p>Numero Arrume: <span>4</span></p>
+            </div>
+            <button class="btnAdj2 BGblue">Continuar</button>
+        </div>
+        <div class="blockE1">
+            <div class="infoString">
+                <p>Numero Contenedor: <span>731D19345</span></p>
+                <p>Numero Arrume: <span>4</span></p>
+            </div>
+            <button class="btnAdj2 BGblue">Continuar</button>
+        </div>
+    </div>
+    <div class="firstContainerAccidentes" id="firstContaRanes">
+        <div class="columnBlock">
+            <label for="" style="text-align: center;">Referencia*</label>
+            <input class="input" type="text" name="" id="">
+        </div>
+    </div>
+    <div class="contGen">
+        <div class="contGenerInfoRan">
+            <div class="blockInfoRan">
+                <div class="ransinran">
+                    <label for="">RAN*</label>
+                    <input class="input" type="text" name="" id="">
+                    <div class="sinRan">
+                        <label for="">Sin RAN</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+            </div>
+            <div class="columnaFila">
+                <div class="columnBlock3">
+                    <label for="" >Columna*</label>
+                    <input class="inputFilas" type="text" name="" id="">
+                </div>
+                <div class="columnBlock3">
+                    <label for="" >Fila*</label>
+                    <input class="inputFilas" type="text" name="" id="">
+                </div>
+            </div>
+            <div class="columnBlock">
+                <label for="">Foto RAN*</label>
+                <label for="adjuntarFotoRAN" class=" BGblue btnAdj">Adjuntar</label>
+                <input style="display: none;" type="file" name="" id="adjuntarFotoRAN">
+            </div>
+            <div class="columnBlock">
+                <label for="">Foto Material*</label>
+                <label for="adjuntarFotoMaterial" class=" BGblue btnAdj">Adjuntar</label>
+                <input style="display: none;" type="file" name="" id="adjuntarFotoMaterial">
+            </div>
+            
+        </div>
+        <div class="observ">
+            <label for="">Observación</label>
+            <div class="minus">
+                <textarea class="textArea" name="" id="" cols="100%" rows="3"></textarea>
+            </div>
+            
+        </div>
+    </div>
+    <div class="ranesAdicionalesArea">
+        <!-- Cada vez que se da clic en el "+" se adiciona en esta area -->
+    </div>
+    <div class="plusBlock" id="plusBlockRanes">
+        <i class="fa-solid fa-plus"></i>
+    </div>
+    
+</section>
+
+<!-- Script para agregar un nuevo formulario de RANES -->
+<script>
+    const espacioRanesAdicionales = document.querySelector(".ranesAdicionalesArea")
+    const plusBotonRanes = document.querySelector("#plusBlockRanes")
+
+    let ranesInHTML = []
+
+    plusBotonRanes.addEventListener("click",()=> {
+        let formatoRan = 
+        `
+        <div class="contGen">
+            <div class="contGenerInfoRan">
+                <div class="blockInfoRan">
+                    <div class="ransinran">
+                        <label for="">RAN*</label>
+                        <input class="input" type="text" name="" id="">
+                        <div class="sinRan">
+                            <label for="">Sin RAN</label>
+                            <input type="checkbox" name="" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="columnaFila">
+                    <div class="columnBlock3">
+                        <label for="" >Columna*</label>
+                        <input class="inputFilas" type="text" name="" id="">
+                    </div>
+                    <div class="columnBlock3">
+                        <label for="" >Fila*</label>
+                        <input class="inputFilas" type="text" name="" id="">
+                    </div>
+                </div>
+                <div class="columnBlock">
+                    <label for="">Foto RAN*</label>
+                    <label for="adjuntarFotoRAN" class=" BGblue btnAdj">Adjuntar</label>
+                    <input style="display: none;" type="file" name="" id="adjuntarFotoRAN">
+                </div>
+                <div class="columnBlock">
+                    <label for="">Foto Material*</label>
+                    <label for="adjuntarFotoMaterial" class=" BGblue btnAdj">Adjuntar</label>
+                    <input style="display: none;" type="file" name="" id="adjuntarFotoMaterial">
+                </div>
+                
+            </div>
+            <div class="observ">
+                <label for="">Observación</label>
+                <div class="minus">
+                    <textarea class="textArea colsa" name="" id="" cols="" rows="3"></textarea>
+                    <div class="plusBlockRed">
+                        <i class="fa-solid fa-minus"></i>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        `
+        $(espacioRanesAdicionales).append(formatoRan);
+
+        const botonesMinus = document.querySelectorAll(".plusBlockRed")
+
+        botonesMinus.forEach(boton => {
+            boton.addEventListener("click",()=> {
+                
+                const contPadre = boton.parentNode.parentNode.parentNode;
+                contPadre.remove(contPadre)
+            })
+        })
+    });
+    
+</script>

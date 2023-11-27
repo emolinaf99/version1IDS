@@ -1,0 +1,223 @@
+#contenedorTotalCo {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 400;
+    width: 95%;
+}
+
+.firstBlockCo {
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #D0D3D8;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.firstBlockCo img {
+    width: 130px;
+}
+
+.infoCo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+}
+
+.infoBlockCo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.bld {
+    font-weight: 600;
+}
+
+.marginTop1 {
+    margin-top: 1rem;
+}
+
+.marginTop2 {
+    margin-top: 2rem;
+}
+
+.infoBlockCo li {
+    list-style: inside;
+}
+
+.ibco {
+    gap: 0.5rem;
+}
+
+.tablePrecioTotalDesktop {
+    display: none;
+}
+
+.tablePrecioTotalMovile {
+    width: 100%;
+    border: 1px solid #D0D3D8;
+}
+
+.tr1 {
+    color: white;
+    background-color: #5B8FC8;
+}
+
+.tr1 th {
+    padding: 0.5rem;
+}
+
+.tr2 {
+    text-align: center;
+    background-color: #D0D3D8;
+}
+
+.tr2 td {
+    padding: 0.5rem;
+}
+
+.piePagin {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+
+@media screen and (min-width:768px) {
+    .tablePrecioTotalMovile {
+        display: none;
+        width: 100%;
+        border: 1px solid #D0D3D8;
+    }
+
+    .tablePrecioTotalDesktop {
+        display: block;
+        width: 100%;
+        border: 1px solid #D0D3D8;
+    }
+
+    #contenedorTotalCo {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-weight: 400;
+        width: 95%;
+    }
+    
+}
+
+@media screen and (min-width:1280px) {
+
+    .tablePrecioTotalMovile {
+        display: none;
+        width: 100%;
+        border: 1px solid #D0D3D8;
+    }
+
+    #contenedorTotalCo {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        font-weight: 400;
+        width: 70%;
+    }
+    
+    .firstBlockCo {
+        font-weight: 600;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid #D0D3D8;
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+    
+    .firstBlockCo img {
+        width: 130px;
+    }
+    
+    .infoCo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .infoBlockCo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    .bld {
+        font-weight: 600;
+    }
+    
+    .marginTop1 {
+        margin-top: 1rem;
+    }
+    
+    .marginTop2 {
+        margin-top: 2rem;
+    }
+    
+    .infoBlockCo li {
+        list-style: inside;
+    }
+    
+    .ibco {
+        gap: 0.5rem;
+    }
+    
+    .tablePrecioTotalDesktop {
+        width: 100%;
+        border: 1px solid #D0D3D8;
+    }
+    
+    .tr1 {
+        color: white;
+        background-color: #5B8FC8;
+    }
+    
+    .tr1 th {
+        padding: 0.5rem;
+    }
+    
+    .tr2 {
+        text-align: center;
+        background-color: #D0D3D8;
+    }
+    
+    .tr2 td {
+        padding: 0.5rem;
+    }
+    
+    .piePagin {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: grey;
+        margin-top: 2rem;
+    }
+    
+}

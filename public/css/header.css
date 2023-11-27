@@ -1,0 +1,545 @@
+.headerContainer {
+    background-color:#14213D;
+    display: flex;
+    padding: 1rem 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-size: 14px;
+    height: 4rem;
+    position: relative;
+}
+
+.burgerMenuBlock {
+    width: 33%;
+}
+
+.burgerMenuIcon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.imgContainer {
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgHeader {
+    width: 60px;
+}
+
+.iconD {
+    font-weight: 700;
+}
+
+.userBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    gap: 1rem;
+    width: 33%;
+}
+
+.userIcon {
+    width:50px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Menu Hamburguesa Styles */
+
+.site-home {
+    background-color: #14213D;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    width: 250px;
+    min-height: 100%;
+    overflow-y:scroll;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0;
+    order: 1;
+    top: 0;
+    left: -350px;
+    transition: all .5s ease ;
+    padding: 0;
+    padding-top: 5rem;
+    z-index: 33;
+    overflow-x: hidden;
+}
+
+.activeMain {
+    transform:translate(+349px) ;
+}
+
+.site-home::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.site-home::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.site-home::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.site-home::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.site-home::-webkit-scrollbar-thumb {
+    background-color: #d5d5d5;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.site-home::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+.site-home li {
+    color: white;
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 1rem;
+}
+
+.contItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    font-size: 14px;
+    width: 100%;
+}
+
+.contItem i {
+    font-size: 25px;
+}
+
+.equis {
+    font-size: 22px;
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 2px;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.iconC {
+    font-size: 25px;
+    margin-right: 0.5rem;
+    width: 2rem;
+    text-align: center;
+}
+
+.equis:focus {
+    color: #EDC500;
+    transform: scale(1.1);
+    
+}
+
+
+
+.opacity {
+    transition: all .5s ease;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index:11;
+    display: none;
+    overflow-y: hidden;
+    left: 0%;
+    animation-name: tiempoAparicion;
+    animation-duration: .5s;
+    height: 100%;
+    width: 100%;
+}
+
+.opacityVentanas {
+    transition: all .5s ease;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index:11;
+    display: none;
+    overflow-y: hidden;
+    left: 0%;
+    animation-name: tiempoAparicion;
+    animation-duration: .3s;
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes tiempoAparicion {
+    from {
+        
+        background-color: transparent;
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+
+.site-home li:hover, .site-home li:focus {
+    background-color:#000927;
+}
+
+.site-home li:hover > a, .site-home li:focus > a {
+    color: white
+}
+
+.site-home a {
+    color: white;
+    width: 250px;
+}
+
+.account {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:  1px solid #d5d5d5;
+    position: absolute;
+    right: 2rem;
+    top: 4.2rem;
+    background-color: white;
+    height: fit-content;
+    z-index:2;
+}
+
+.account a {
+    text-decoration: none;
+    color: #14213D;
+    text-align: left;
+    width: 100%;
+    height: 3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.account a:hover {
+    color: #5B8FC8;
+}
+
+.account a li {
+    list-style: none;
+}
+
+.triangle {
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: -21px;
+    right: -0.1px;
+}
+
+
+
+@media screen and (min-width:768px) {
+
+    .userIcon {
+        width:30px;
+        color: white;
+        cursor: pointer;
+    }
+    .headerContainer {
+        background-color:#14213D;
+        display: flex;
+        padding: 1rem 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        font-size: 14px;
+        height: 4rem;
+        position: relative;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .headerContainer {
+        background-color:#14213D;
+        display: flex;
+        padding: 1rem 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        font-size: 14px;
+        height: 4rem;
+        position: relative;
+    }
+    
+    .burgerMenuBlock {
+        width: 33%;
+    }
+    
+    .burgerMenuIcon {
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .imgContainer {
+        width: 33%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .imgHeader {
+        width: 60px;
+    }
+    
+    .iconD {
+        font-weight: 700;
+    }
+    
+    .userBlock {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        color: white;
+        gap: 1rem;
+        width: 33%;
+    }
+    
+    .userIcon {
+        width:30px;
+        color: white;
+        cursor: pointer;
+    }
+    
+    /* Menu Hamburguesa Styles */
+    
+    .site-home {
+        background-color: #14213D;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+        width: 250px;
+        min-height: 100%;
+        overflow-y:scroll;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 0;
+        order: 1;
+        top: 0;
+        left: -350px;
+        transition: all .5s ease ;
+        padding: 0;
+        padding-top: 5rem;
+        z-index: 33;
+        overflow-x: hidden;
+    }
+    
+    .activeMain {
+        transform:translate(+349px) ;
+    }
+    
+    .site-home::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    .site-home::-webkit-scrollbar:vertical {
+        width:10px;
+    }
+    
+    .site-home::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+        display: none;
+    } 
+    
+    .site-home::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+    
+    .site-home::-webkit-scrollbar-thumb {
+        background-color: #d5d5d5;
+        border-radius: 20px;
+        border: 2px solid #f1f2f3;
+    }
+    
+    .site-home::-webkit-scrollbar-track {
+        border-radius: 10px;  
+    }
+    
+    .site-home li {
+        color: white;
+        display: block;
+        font-size: 14px;
+        width: 100%;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 10px 1rem;
+    }
+    
+    .contItem {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    .contItem i {
+        font-size: 25px;
+    }
+    
+    .equis {
+        font-size: 22px;
+        color: white;
+        position: absolute;
+        top: 15px;
+        right: 2px;
+        height: 2rem;
+        width: 2rem;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .iconC {
+        font-size: 25px;
+        margin-right: 0.5rem;
+        width: 2rem;
+        text-align: center;
+    }
+    
+    .equis:focus {
+        color: #EDC500;
+        transform: scale(1.1);
+        
+    }
+    
+    
+    
+    .opacity {
+        transition: all .5s ease;
+        bottom: 0;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index:11;
+        display: none;
+        overflow-y: hidden;
+        left: 0%;
+        animation-name: tiempoAparicion;
+        animation-duration: .5s;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .opacityVentanas {
+        transition: all .5s ease;
+        bottom: 0;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index:11;
+        display: none;
+        overflow-y: hidden;
+        left: 0%;
+        animation-name: tiempoAparicion;
+        animation-duration: .3s;
+        height: 100%;
+        width: 100%;
+    }
+    
+    @keyframes tiempoAparicion {
+        from {
+            
+            background-color: transparent;
+        }
+    
+        to {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+    
+    
+    
+    .site-home li:hover, .site-home li:focus {
+        background-color:#000927;
+    }
+    
+    .site-home li:hover > a, .site-home li:focus > a {
+        color: white
+    }
+    
+    .site-home a {
+        color: white;
+        width: 250px;
+    }
+    
+    .account {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border:  1px solid #d5d5d5;
+        position: absolute;
+        right: 2rem;
+        top: 4.2rem;
+        background-color: white;
+        height: fit-content;
+        z-index:2;
+    }
+    
+    .account a {
+        text-decoration: none;
+        color: #14213D;
+        text-align: left;
+        width: 100%;
+        height: 3rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid #d5d5d5;
+    }
+    
+    .account a:hover {
+        color: #5B8FC8;
+    }
+    
+    .account a li {
+        list-style: none;
+    }
+    
+    .triangle {
+        font-size: 40px;
+        color: white;
+        position: absolute;
+        top: -21px;
+        right: -0.1px;
+    }
+    
+}

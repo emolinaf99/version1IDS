@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Consulta Ordenes de Trabajo TQC</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Inspección - 274565391</p></div>
+            <section class="infoArea">
+                
+                <div class="contenedorTotal">
+                    <section class="contenedorGeneralConsultaPEI" id="">
+
+                        <div class="contenedorDetailInsp">
+                            <div class="contenedorFotosInspeccion">
+                                <div class="selectorFtBlock">
+                                    <h2>Fotos Adjuntadas</h2>
+                                    <div class="contOpt">
+                                        <button class="btn btnFotos BGgrisClaro selectedBorder" id="btnRanSofasa">RAN Sofasa</button>
+                                        <button class="btn btnFotos BGgrisClaro" id="btnRanProveedor">RAN Proveedor</button>
+                                        <button class="btn btnFotos BGgrisClaro" id="btnTrazabilidad">Trazabilidad</button>
+                                        <button class="btn btnFotos BGgrisClaro" id="btnDefectos">Defectos</button>
+                                    </div>
+                                </div>
+                                <div class="fotosBlock">
+                                    
+                                    <div class="fotoRanSofasa" id="fotoRANSofasa">
+                                        <img src="/images/foto2.jpg" alt="">
+                                    </div>
+                                    <div class="fotoRanSofasa" id="fotoRANProveedor">
+                                        <img src="/images/foto3.jpg" alt="">
+                                    </div>
+                                    <div class="fotoRanSofasa" id="fotoTrazabilidad">
+                                        <img src="/images/fotoTraza.jpg" alt="">
+                                    </div>
+                                    <div class="fotoRanSofasa" id="fotosDefectos">
+                                        <img class="imgDef" src="/images/fotoDef2.jpg" alt="">
+                                        <img class="imgDef" src="/images/fotoDef1.jpg" alt="">
+                                        
+                                    </div>
+                                    <div class="contenedorFlechas">
+                                        <i class="fa-solid fa-chevron-right mostrarRight"></i>
+                                        <i class="fa-solid fa-chevron-left mostrarLeft"></i>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="contenedorInfoInspec">
+                                <form class="formEditInsp" action="">
+                                    <div class="cont1DetailInsp">
+                                        <div class="containerInpInsp">
+                                            <label for="">Empresa:</label>
+                                            <input class="i99 viewInput" type="text" name="" id="" readonly>
+                                        </div>
+                                        <div class="containerInpInsp">
+                                            <label for="">Fecha:</label>
+                                            <input class="i99 viewInput" type="text" name="" id="" readonly>
+                                        </div>
+                                        <div class="containerInpInsp">
+                                            <label for="">Referencia:</label>
+                                            <input class="i99 viewInput" type="text" name="" id="" readonly>
+                                        </div>
+                                        <div class="containerInpInsp">
+                                            <label for="">RAN:</label>
+                                            <input class="i99 viewInput" type="text" name="" id="" readonly>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="containerInpInspRes">
+                                        <label for="">Resultado:</label>
+                                        <div class="inpInspResBlock">
+                                            <label for="">Cantidad Inspeccionada:</label>
+                                            <input class="i99 viewInput" type="text" name="" id="" readonly>
+                                        </div>
+                                        <div class="inpInspResBlock">
+                                            <label for="">Cantidad Recuperada:</label>
+                                            <input class="i99 viewInput" type="text" name="" id="" readonly>
+                                        </div>
+                                        <div class="inpInspResBlock">
+                                            <label for="">Cantidad Rechazada:</label>
+                                            <input class="i99 viewInput" type="text" name="" id="" readonly>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="containerInpInspRes">
+                                        <label for="">Inspector(es):</label>
+                                        <input class="i99 viewInput input100" type="text" name="" id="" readonly>
+                                    </div>
+                                    <div class="containerInpInspRes">
+                                        <label for="">Observaciones:</label>
+                                        <textarea readonly class="it viewTextArea" name="" id="" cols="30" rows="2"></textarea>
+                                    </div>
+                                    <div class="botonesA formBtnsI">
+                                        <button type="button" class="btn btnAdmin BGyellow" id="atrasI">Volver</button>
+                                        <button type="submit" class="btn btnAdmin BGgreen" id="guardarCambiosI">Guardar</button>
+                                        
+                                    </div>
+
+                                    <div class="botonesA adminBtns">
+                                        <button type="button" class="btn btnAdmin BGorange" id="editarInspeccion">Editar</button>
+                                        <button type="button" class="btn btnAdmin BGred">Eliminar</button>
+                                    </div>
+
+                                
+                                </form>
+                            </div>
+
+                        </div>
+                        
+                    </section>
+                    
+                </div>
+
+            </section>
+        </section>
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+<!-- Script para cambiar de color e imagen al dar clic en cuadro 
+fotos adjuntadas-->
+
+<script>
+
+    // Variables 
+    const btnFotosAdjuntas = document.querySelectorAll(".btnFotos")
+    const mostrarRanSofasa = document.querySelector("#fotoRANSofasa")
+    const mostrarRanProveedor = document.querySelector("#fotoRANProveedor")
+    const mostrarTrazabilidad = document.querySelector("#fotoTrazabilidad")
+    const mostrarDefectos = document.querySelector("#fotosDefectos")
+    const btnSofasa = document.querySelector("#btnRanSofasa")
+    const btnProveedor = document.querySelector("#btnRanProveedor")
+    const btnTrazabilidad= document.querySelector("#btnTrazabilidad")
+    const btnDefectos = document.querySelector("#btnDefectos")
+
+    // Ejecutando Funcion
+
+    btnSofasa.addEventListener("click",()=> {
+        mostrarFotos(mostrarRanSofasa)
+        document.querySelector(".contenedorFlechas").style.display = "none"
+    })
+    btnProveedor.addEventListener("click",()=> {
+        mostrarFotos(mostrarRanProveedor) 
+        document.querySelector(".contenedorFlechas").style.display = "none"
+    })
+    btnTrazabilidad.addEventListener("click",()=> {
+        mostrarFotos(mostrarTrazabilidad)
+        document.querySelector(".contenedorFlechas").style.display = "none"
+    })
+    btnDefectos.addEventListener("click",()=> {
+        mostrarFotos(mostrarDefectos)
+        document.querySelector(".contenedorFlechas").style.display = "flex"
+    })
+
+    // Boton que escuche click cambia de color
+    btnFotosAdjuntas.forEach(btn => {
+        btn.addEventListener("click",()=> {
+            btnFotosAdjuntas.forEach(boton => {
+                boton.classList.remove("selectedBorder")
+                
+            })
+            btn.classList.add("selectedBorder")
+        })
+    })
+
+    // Funcion
+    let array = [mostrarRanProveedor, mostrarRanSofasa, mostrarTrazabilidad, mostrarDefectos]
+
+    function mostrarFotos (campo) {
+        let otroArray = array.filter((e) => {
+            if(e != campo) {
+                return e
+            }
+        })
+        otroArray.forEach((e) => {
+            e.style.display = "none"
+        })
+        campo.style.display = "flex"
+    }
+
+    // Saber cuantas imagenes en defecto hay y realizar estilos segun cantidad
+
+    const flechaIzq = document.querySelector(".mostrarLeft")
+    const flechaDer = document.querySelector(".mostrarRight")
+    let imagenes = mostrarDefectos.querySelectorAll("img")
+    let imagenesClass = document.querySelectorAll(".imgDef")
+    let cantidadImagenes = imagenes.length;
+    let widthTotal = (cantidadImagenes * 200 - 200) + "%"
+
+    document.querySelector(".contenedorFlechas").style.display = "none"
+    if(cantidadImagenes != 0 && cantidadImagenes != 1) {
+
+        const valorInicial = 0;
+
+        const ubicationArray = [];
+        
+        flechaDer.addEventListener("click",()=> {
+            flechaIzq.style.display = "block"
+            ubicationArray.push(200)
+            const sumaUbicationArray = ubicationArray.reduce((valorAnterior,valorActual) => valorAnterior + valorActual, valorInicial)
+            const widthUbication = sumaUbicationArray + "%";
+
+            mostrarDefectos.style.marginRight = widthUbication
+            
+            if(mostrarDefectos.style.marginRight == widthTotal) {
+                flechaDer.style.display = "none"     
+            }
+            
+        })
+        
+        flechaIzq.addEventListener("click",()=> {
+
+            flechaDer.style.display = "block"
+            ubicationArray.push(-200)
+            const sumaUbicationArray = ubicationArray.reduce((valorAnterior,valorActual) => valorAnterior + valorActual, valorInicial)
+            const widthUbication = sumaUbicationArray + "%";
+
+            mostrarDefectos.style.marginRight = widthUbication
+
+            if(mostrarDefectos.style.marginRight == "0%") {
+                flechaIzq.style.display = "none"
+            }
+        })
+
+        flechaDer.style.display = "block"
+    }
+    
+</script>
+
+
+<!-- Script para editar los datos de la vista de inspeccion -->
+<script>
+    const btnEditar = document.querySelector("#editarInspeccion")
+    const allInputs = document.querySelectorAll(".i99")
+    const btnsForm = document.querySelector(".formBtnsI")
+    const bloqueAdmin = document.querySelector(".adminBtns")
+    const btnVolver = document.getElementById("atrasI")
+    const observaciones = document.querySelector(".it")
+
+    btnEditar.addEventListener("click",()=> {
+        allInputs.forEach(input => {
+            input.classList.add("input")
+            input.classList.remove("viewInput")
+            input.removeAttribute("readonly")
+            btnsForm.style.display = "flex"
+            bloqueAdmin.style.display = "none"
+            observaciones.classList.remove("viewTextArea")
+            observaciones.classList.add("TextArea")
+        })
+    })
+
+    btnVolver.addEventListener("click",()=> {
+        allInputs.forEach(input => {
+            input.classList.remove("input")
+            input.classList.add("viewInput")
+            input.setAttribute("readonly","")
+            btnsForm.style.display = "none"
+            bloqueAdmin.style.display = "flex"
+            observaciones.classList.add("viewTextArea")
+            observaciones.classList.remove("TextArea")
+        })
+    })
+
+
+</script>

@@ -1,0 +1,102 @@
+<section class="contenedorInfo" id="infoContenedorAccidentes">
+    <div class="firstContainerAccidentes">
+        <img src="/images/numeroContenedor.png" alt="">
+        <div class="underImg">
+            <div class="columnBlock">
+                <label for="">Numero Contenedor*</label>
+                <input class="input" type="text" name="" id="">
+            </div>
+            <div class="columnBlock">
+                <label for="">Foto Contenedor*</label>
+                <label for="adjuntarFotoContenedor" class=" BGblue btnAdj2">Adjuntar</label>
+                <input style="display: none;" type="file" name="" id="adjuntarFotoContenedor">
+            </div>
+            
+        </div>
+    </div>
+    <div class="arrumeBlock">
+        <div class="columnBlock2">
+            <label for="">Foto Arrume*</label>
+            <label for="adjuntarFotoContenedor" class=" BGblue btnAdj2">Adjuntar</label>
+            <input style="display: none;" type="file" name="" id="">
+        </div>
+        <div class="columnBlock2">
+            <label for="">Numero Arrume*</label>
+            <input class="input" type="text" name="" id="">
+        </div>
+        <div class="blo">
+            <div class="columnBlock3">
+                <label for="">Filas*</label>
+                <input class="inputFilas" type="text" name="" id="">
+            </div>
+            <div class="columnBlock3">
+                <label for="">Columnas*</label>
+                <input class="inputFilas" type="text" name="" id="">
+            </div>
+        </div>
+        
+    </div>
+    <div class="arrumesAdicionalesArea" id="arrumesAdicionalesArea">
+        <!-- Cada vez que se da clic en el "+" se adiciona en esta area -->
+    </div>
+    <div class="plusBlock" id="plusBlockArrume">
+        <i class="fa-solid fa-plus"></i>
+    </div>
+
+</section>
+
+<!-- Script para agregar un nuevo formulario de arrume-->
+<script>
+    const espacioArrumesAdicionales = document.querySelector(".arrumesAdicionalesArea")
+    const plusBoton = document.querySelector("#plusBlockArrume")
+
+    let arrumesInHTML = []
+
+    plusBoton.addEventListener("click",()=> {
+
+        
+        let formatoArrume = 
+        `
+        <div class="arrumeBlock">
+            <div class="columnBlock2">
+                <label for="">Foto Arrume*</label>
+                <label for="adjuntarFotoContenedor" class=" BGblue btnAdj2">Adjuntar</label>
+                <input style="display: none;" type="file" name="" id="">
+            </div>
+            <div class="columnBlock2">
+                <label for="">Numero Arrume*</label>
+                <input class="input" type="text" name="" id="">
+            </div>
+            <div class="blo">
+                <div class="columnBlock3">
+                    <label for="">Filas*</label>
+                    <input class="inputFilas" type="text" name="" id="">
+                </div>
+                <div class="columnBlock3">
+                    <label for="">Columnas*</label>
+                    <input class="inputFilas" type="text" name="" id="">
+                </div>
+            </div>
+            
+            <div class="plusBlock2">
+                <i class="fa-solid fa-minus red"></i>
+            </div>
+        </div>
+        `
+        $('#arrumesAdicionalesArea').append(formatoArrume);
+
+        const botonesMinus = document.querySelectorAll(".plusBlock2")
+
+        botonesMinus.forEach(boton => {
+            boton.addEventListener("click",()=> {
+                
+                const contPadre = boton.parentNode;
+                contPadre.remove(contPadre)
+            })
+        })
+
+    });
+
+    
+    
+</script>

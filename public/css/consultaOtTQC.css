@@ -1,0 +1,52 @@
+.renglonBl {
+    width: 100%;
+}
+
+
+
+.renglonBl p {
+    width: 100%;
+}
+
+.negrita {
+    font-weight: 400;
+}
+
+.negrita span {
+    font-weight: 300;
+}
+
+.wdw15 {
+    height: 2rem;
+    width: fit-content;
+    padding: 0.4rem;
+}   
+
+.blr2 {
+    width: 30%;
+}
+
+@media screen and (min-width:768px) {
+    .wdw15 {
+        width: 8rem;
+        height: 2rem;
+    }   
+}
+
+@media screen and (min-width:1280px) {
+    .renglonBl {
+        width: 35%;
+    }
+    
+    .renglonBl p {
+        width: 100%;
+    }
+    
+    .negrita {
+        font-weight: 400;
+    }
+    
+    .negrita span {
+        font-weight: 300;
+    }
+}

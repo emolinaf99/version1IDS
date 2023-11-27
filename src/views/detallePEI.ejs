@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Detalle Pieza En Inspección</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Detalle Pieza en Inspección</p></div>
+            <section class="infoArea">
+                
+                <div class="contenedorTotal">
+    
+                    <section class="contenedorFormularioIPEI" id="">
+                        <form class="needs-validation formIPEI" action="" onsubmit="enviar(this)" method="" name="" novalidate>
+                            <div class="b1FormIPEI">
+                                <div class="blockB1">
+                                    <label class="labelB1" for="">Referencia*</label>
+                                    <input required readonly class="viewInputB1 form-control in99" type="text" name="" id="">
+                                </div>
+                                <div class="blockB1">
+                                    <label class="labelB1" for="">Descripción*</label>
+                                    <input readonly class="viewInputB1 in99" type="text" name="" id="">
+                                </div>
+                                <div class="blockB1">
+                                    <label class="labelB1" for="">Proveedor*</label>
+                                    <input readonly class="viewInputB1 in99" type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="vx">
+                                <div class="b1FormIPEI" id="b2FormIPEI">
+                                    <div class="blockB1">
+                                        <label class="labelB1" for="">Origen del Problema*</label>
+                                        <input readonly class="viewInputB1 vwB1" type="text" name="" id="">
+                                        <select class="inputB1 viewSelects" name="" id="">
+                                            <option value="">NaN</option>
+                                        </select>
+                                    </div>
+                                    <div class="blockB1">
+                                        <label class="labelB1" for="">N° GQE/LUP*</label>
+                                        <input readonly class="viewInputB1 vwB1" type="text" name="" id="">
+                                        <select class="inputB1 viewSelects" name="" id="">
+                                            <option value="">Sin GQE</option>
+                                            <option value="">GQE</option>
+                                        </select>
+                                    </div>
+                                    <div class="blockB1">
+                                        <label class="labelB1" for="">Defecto*</label>
+                                        <textarea class="textAreaDef viewTextArea bgWhite" name="" id="textAreaDetailPEI" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                                <div class="b1FormIPEI" id="b2FormIPEI2">
+                                    <div class="blockB1">
+                                        <label class="labelB1" for="">Responsable*</label>
+                                        <input readonly class="viewInputB1 vwB1" type="text" name="" id="">
+                                        <select class="inputB1 viewSelects" name="" id="">
+                                            <option value="">Persona1</option>
+                                            <option value="">Persona2</option>
+                                        </select>
+                                    </div>
+                                    <div class="blockB1">
+                                        <label class="labelB1" for="">Tipo*</label>
+                                        <input readonly class="viewInputB1 vwB1" type="text" name="" id="">
+                                        <select class="inputB1 viewSelects" name="" id="">
+                                            <option value="">IN</option>
+                                            <option value="">PC</option>
+                                            <option value="">RT</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="b1FormIPEI" id="b2FormIPEI3">
+                                    <div class="blockB1" id="blockB3">
+                                        <label class="labelB1" for="">Taller*</label>
+                                        <div class="contCheckBox">
+                                            <div class="blockCheckBox">
+                                                <label for="">E</label>
+                                                <input class="checkRadio" type="radio" class="inputB1" name="taller" id="" value="Ensamble">
+                                            </div>
+                                            <div class="blockCheckBox">
+                                                <label for="">S</label>
+                                                <input class="checkRadio" type="radio" class="inputB1" name="taller" id="" value="Soldadura">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                    </input>
+                                    </div>
+                                    <div class="blockB1">
+                                        <label class="labelB1" for="">Pais*</label>
+                                        <input readonly class="viewInputB1 vwB1" type="text" name="" id="">
+                                        <select class="inputB1 viewSelects" name="" id="">
+                                            <option value="">Colombia</option>
+                                            <option value="">Australia</option>
+                                            <option value="">Etc</option>
+                                        </select>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                            <div class="b3FormIPEI">
+                                <div class="inpRadioContainer">
+                                    <div class="inpRadioBlock">
+                                        <div class="blockLabel" id="blockLabelTransparent">
+                                            <label class="labelRadio" for="piezaDeAspecto"></label>
+                                        </div>
+                                        <div class="blockInputs" id="blockInputTransparent">
+                                            <p class="inputRadio" id="">Si</p>
+                                            <p class="inputRadio" id="">No</p>
+                                        </div>
+                                    </div>
+                                    <div class="inpRadioBlock">
+                                        <div class="blockLabel">
+                                            <label class="labelRadio" for="piezaDeAspecto">Pieza de aspecto?</label>
+                                        </div>
+                                        <div class="blockInputs">
+                                            <input class="inputRadio" type="radio" name="piezaDeAspecto" id="" value="1">
+                                            <input class="inputRadio" type="radio" name="piezaDeAspecto" id="" value="1">
+                                        </div>
+                                    </div>
+                                    <div class="inpRadioBlock"> 
+                                        <div class="blockLabel">
+                                            <label class="labelRadio" for="CSR">CSR?</label>
+                                        </div>
+                                        <div class="blockInputs">
+                                            <input class="inputRadio" type="radio" name="CRS" id="" value="1">
+                                            <input class="inputRadio" type="radio" name="CRS" id="" value="1">
+                                        </div>
+                                    </div>
+                                    <div class="inpRadioBlock">
+                                        <div class="blockLabel">
+                                            <label class="labelRadio" for="afectaCSR">Afecta CSR?</label>
+                                        </div>
+                                        <div class="blockInputs">
+                                            <input class="inputRadio" type="radio" name="afectaCSR" id="" value="1">
+                                            <input class="inputRadio" type="radio" name="afectaCSR" id="" value="1">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="inpRadioBlock">
+                                            <div class="blockLabel">
+                                                <label class="labelRadio" for="modificaPieza">Se modifica la pieza?</label>                         
+                                            </div>
+                                            <div class="blockInputs">
+                                                <input class="inputRadio" type="radio" name="modificaPieza" id="" value="1">
+                                                <input class="inputRadio" type="radio" name="modificaPieza" id="" value="1">
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="sec2Right">
+                                    <div class="containerX">
+                                        <label class="labelB1" for="vehiculo"> Vehículo*</label>
+                                        <div class="contCheckBox blockB1-2">
+                                            <div class="blockCheckBox">
+                                                <label for="">B52</label>
+                                                <input class="checkRadio" type="checkbox" class="inputB1" name="vehiculo" id="" value="B52">
+                                            </div>
+                                            <div class="blockCheckBox">
+                                                <label for="">L52</label>
+                                                <input class="checkRadio" type="checkbox" class="inputB1" name="vehiculo" id="" value="L52">
+                                            </div>
+                                            <div class="blockCheckBox">
+                                                <label for="">HJD</label>
+                                                <input class="checkRadio" type="checkbox" class="inputB1" name="vehiculo" id="" value="HJD">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="containerX">
+                                        <div class="blockB1 blockB1-2" >
+                                            <label class="labelB1" for="">Indicador Afectado*</label>
+                                            <input readonly class="viewInputB1 vwB1" type="text" name="" id="">
+                                            <select class="inputB1 viewSelects" name="" id="">
+                                                <option value="">Indicador 1</option>
+                                                <option value="">Indicador 2</option>
+                                                <option value="">Indicador 3</option>
+                                            </select>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="containerX">
+                                        <div class="blockB1 blockB1-2" >
+                                            <label class="labelB1" for="">Quien Paga*</label>
+                                            <input readonly class="viewInputB1 vwB1" type="text" name="" id="">
+                                            <select class="inputB1 viewSelects" name="" id="">
+                                                <option value="">Nadie</option>
+                                                <option value="">Yo</option>
+                                                <option value="">Usted</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                    
+                            </div>
+                            <div class="b3FormIPEI">
+                                <div class="notContainer">
+                                    <label class="labelB1 blockB1-2" for="">Notíficación</label>
+                                    <input readonly class="viewInputB1 vwB1" type="text" name="" id="">
+                                    <select class="inputB1 blockB1-2 viewSelects" name="" id="">
+                                        <option value="">Opt 1</option>
+                                        <option value="">Opt 2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="btnsDetailPEI">
+                                <label class="botonCrear BGblue btnAdj" for="gama"><i class="fa-solid fa-upload"></i><p>Subir Gama</p></label>
+                                <input class="none" type="file" name="" id="gama">
+                                <button class=" botonCrear BGyellow none" type="button" id="backBtnPEI">Volver</button>
+                                <button class=" botonCrear BGgreen none" type="button" id="saveBtnPEI">Guardar</button>
+                                <button class=" botonCrear BGorange" type="button" id="edBtnPEI">Editar</button>
+                                <button class=" botonCrear BGred" type="submit" id="deleteBtnPEI">Eliminar</button>
+                            </div>
+                    
+                            
+                        </form>                                                                         
+                    </section>
+                    
+                </div>
+
+            </section>
+        </section>
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+<script>
+    const btnEditarPEI = document.querySelector("#edBtnPEI")
+    const selects = document.querySelectorAll(".viewSelects")
+    const inputs = document.querySelectorAll(".vwB1")
+    const textAreaDetailPEI = document.querySelector(".viewTextArea")
+    const primInputs = document.querySelectorAll(".in99")
+    const btnGuardarPEI = document.querySelector("#saveBtnPEI")
+    const btnEliminarPEI = document.querySelector("#deleteBtnPEI")
+    const btnVolverPEI = document.querySelector("#backBtnPEI")
+
+    // Al dar clic en boton editar
+    btnEditarPEI.addEventListener("click",()=> {
+        selects.forEach(select => {
+            select.style.display = "flex"
+        })
+
+        inputs.forEach(input => {
+            input.style.display = "none"
+        })
+
+        primInputs.forEach(input => {
+            input.classList.add("inputB1")
+        })
+
+        textAreaDetailPEI.classList.remove("bgWhite")
+        textAreaDetailPEI.style.border = "1px solid #D0D3D8"
+        btnEditarPEI.classList.add("none")
+        btnVolverPEI.classList.remove("none")
+        btnGuardarPEI.classList.remove("none")
+        btnEliminarPEI.classList.add("none")
+    })
+
+    // Al dar clic en boton volver
+    btnVolverPEI.addEventListener("click",()=> {
+        selects.forEach(select => {
+            select.style.display = "none"
+        })
+
+        inputs.forEach(input => {
+            input.style.display = "flex"
+        })
+
+        primInputs.forEach(input => {
+            input.classList.remove("inputB1")
+        })
+
+        textAreaDetailPEI.classList.add("bgWhite")
+        textAreaDetailPEI.style.border = "0px solid #D0D3D8"
+        btnEditarPEI.classList.remove("none")
+        btnVolverPEI.classList.add("none")
+        btnGuardarPEI.classList.add("none")
+        btnEliminarPEI.classList.remove("none")
+    })
+
+    // Al dar clic en boton guardar
+    btnGuardarPEI.addEventListener("click",()=> {
+        selects.forEach(select => {
+            select.style.display = "none"
+        })
+
+        inputs.forEach(input => {
+            input.style.display = "flex"
+        })
+
+        primInputs.forEach(input => {
+            input.classList.remove("inputB1")
+        })
+
+        textAreaDetailPEI.classList.add("bgWhite")
+        textAreaDetailPEI.style.border = "0px solid #D0D3D8"
+        btnEditarPEI.classList.remove("none")
+        btnVolverPEI.classList.add("none")
+        btnGuardarPEI.classList.add("none")
+        btnEliminarPEI.classList.remove("none")
+    })
+
+</script>

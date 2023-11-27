@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Crear Orden de Trabajo Interna</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Crear Orden de Trabajo Interna</p></div>
+            <section class="infoArea">
+                
+                <div class="contenedorTotal" id="contenedorTotalReporte">
+                    <section class="contenedorUnoReporte">
+
+                        <div class="bloqueGe">
+                            <div class="primerBloque">
+                                <div class="sinRef">
+                                    <label for="">Referencia*</label>
+                                    <div class="sinRefCheck">
+                                        <label for="">Sin Referencia</label>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                </div>
+                                <input class="input inpIns" type="text" name="" id="">
+                                <input class="input inpIns" disabled type="text" name="" id="">
+                            </div>
+                            <div class="primerBloque">
+                                <div class="sinRef">
+                                    <label for="">RAN*</label>
+                                    <div class="sinRefCheck">
+                                        <label for="">Sin RAN</label>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                </div>
+                                <input class="input inpIns" type="text" name="" id="">
+                                <div class="validationsRAN">
+                                    <input class="input inputMiniRAN" disabled type="text" name="" id="">
+                                    <input class="input inputMiniRAN" disabled type="text" name="" id="">
+                                    <input class="input inputMiniRAN" disabled type="text" name="" id="">
+                                    <input class="input inputMiniRAN" disabled type="text" name="" id="">
+                                    <input class="input inputMiniRAN" disabled type="text" name="" id="">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="bloqueGe">
+                            <div class="primerBloque">
+                                <div class="sinRef">
+                                    <label for="">Nombre del Material*</label>
+                                </div>
+                                <input class="input inpIns" type="text" name="" id="">
+
+                            </div>
+                            <div class="primerBloque">
+                                <div class="sinRef">
+                                    <label for="">Motivo de Inspección*</label>
+                                </div>
+                                <textarea class="textArea"  name="" id="" cols="30" rows="5"></textarea>
+                                
+                            </div>
+                            <div class="primerBloque absoluteInput1">
+                                <div class="sinRef">
+                                    <label for="">Nombre de la Persona Responsable*</label>
+                                </div>
+                                <input class="input inpIns" type="text" name="" id="">
+
+                            </div>
+                        </div>
+                        <div class="bloqueGe">
+                            <div class="primerBloque">
+                                <div class="sinRef">
+                                    <label for="">Area Responsable*</label>
+                                </div>
+                                <input class="input inpIns" type="text" name="" id="">
+                            </div>
+                            <div class="primerBloque">
+                                <div class="sinRef">
+                                    <label for="">NIT o Centro de Costos*</label>
+                                </div>
+                                <input class="input inpIns" type="text" name="" id="">
+                            </div>
+                        </div>
+                        <div class="bloqueGe">
+                            <div class="primerBloque">
+                                <div class="sinRef">
+                                    <label for="fotoMaterial">Foto de Material*</label>
+                                </div>
+                                <div class="bloqueAdj">
+                                    <label class="btnAdj BGblue xdz" for="fotoMaterial"><i class="fa-solid fa-upload"></i><p>Adjuntar</p></label>
+                                    <input type="file" name="" id="fotoMaterial">
+                                </div>
+                            </div>
+                            <div class="primerBloque">
+                                <div class="sinRef">
+                                    <label for="">Firma*</label>
+                                </div>
+                                <button class="firmarBtn BGblue">Firmar</button>
+                                <input class="inputValueFirma" type="hidden" name="" id="" value="">
+                            </div>
+                        </div>
+
+                        
+                        <button class="btn BGgreen">Crear</button>
+
+                        
+
+                    </section>
+                    
+                    
+                    
+                </div>
+
+            </section>
+        </section>
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+<!-- Script para que al dar clic en boton firmar cambie de color -->
+<script>
+    const btnFirmar = document.querySelector(".firmarBtn")
+    const inputValueFirma = document.querySelector(".inputValueFirma").value
+
+    btnFirmar.addEventListener("click",()=> {
+        btnFirmar.classList.add("BGgreen")
+        btnFirmar.classList.remove("BGblue")
+        btnFirmar.innerText = "Firmado"
+
+        
+    })
+</script>

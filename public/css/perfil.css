@@ -1,0 +1,200 @@
+#contenedorTotalPerfil {
+    width: 100%;
+    gap: 1rem;
+}
+
+.imgBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.imgBlock img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.bloqueInput {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bloqueInput label {
+    font-weight: 500;
+}
+
+.i88 {
+    width: 10rem;
+}
+
+
+#areaBotonesPerfil {
+    display: none;
+}
+
+.textImg {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    border-radius: 50%;
+    position: absolute;
+    color: white;
+    font-weight: 500;
+}
+
+.textImg:hover {
+    color: #5B8FC8;
+    cursor: pointer;
+}
+
+@media screen and (min-width:768px) {
+
+    #contenedorTotalPerfil {
+        width: 60%;
+        gap: 1rem;
+    }
+    
+    .imgBlock {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        position: relative;
+    }
+    
+    .imgBlock img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    
+    .bloqueInput {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .bloqueInput label {
+        font-weight: 500;
+    }
+    
+    .i88 {
+        width: 10rem;
+    }
+    
+    
+    #areaBotonesPerfil {
+        display: none;
+    }
+    
+    .textImg {
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        padding: 0.2rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        font-size: 14px;
+        border-radius: 50%;
+        position: absolute;
+        color: white;
+        font-weight: 500;
+    }
+    
+    .textImg:hover {
+        color: #5B8FC8;
+        cursor: pointer;
+    }
+    
+}
+
+
+@media screen and (min-width:1280px) {
+
+    #contenedorTotalPerfil {
+        width: 40%;
+        gap: 1rem;
+    }
+    
+    .imgBlock {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+    
+    .imgBlock img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    
+    .bloqueInput {
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .bloqueInput label {
+        font-weight: 500;
+    }
+    
+    .i88 {
+        width: 15rem;
+    }
+    
+    
+    #areaBotonesPerfil {
+        display: none;
+    }
+    
+    .textImg {
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        padding: 0.2rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        font-size: 14px;
+        border-radius: 50%;
+        position: absolute;
+        color: white;
+        font-weight: 500;
+    }
+    
+    .textImg:hover {
+        color: #5B8FC8;
+        cursor: pointer;
+    }
+
+}

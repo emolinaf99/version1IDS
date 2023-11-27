@@ -1,0 +1,55 @@
+
+module.exports = {
+    vistaIngresar:(req,res)=>{
+        res.render('ingreso')
+    },
+    formularioCrearPiezaInspeccion:(req,res)=>{
+        res.render('piezasInspeccion')
+    },
+    crearInspeccion:(req,res)=>{
+        res.render('formInspeccion')
+    },
+    vistaConsulta:(req,res)=>{
+        res.render('consultaInspecciones')
+    },
+    ConsultaOtsTQC:(req,res)=>{
+        res.render('consultaOtsTQC')
+    },
+    ConsultaOtsInternas:(req,res)=>{
+        res.render('consultaOtsInternas')
+    },
+    ConsultaAccidentes:(req,res)=>{
+        res.render('consultaAccidentesContenedores')
+    },
+    formularioCrearOtInterna:(req,res)=>{
+        res.render('formOtInterna')
+    },
+    detalleInspeccion:(req,res)=>{
+        res.render('detalleInspeccion')
+    },
+    ingresarAccidentesContenedores:(req,res)=>{
+        res.render('accidentesContenedores')
+    },
+    vistaCotizaciones:(req,res)=>{
+        res.render('consultaCotizaciones')
+    },
+    funcionesRolVista:(req,res)=>{
+        res.render('funcionesRol')
+    },
+    detalleOtTQC:(req,res)=>{
+        res.render('detalleOtTQC')
+    },
+    detalleAccidenteContenedor:(req,res)=>{
+        res.render('detalleAcContenedor')
+    },
+    detalleOtInterna:(req,res)=>{
+        res.render('detalleOtInterna')
+    },
+    detalleCotizacion:(req,res)=>{
+        res.render('detalleCotizacion')
+    },
+    detallePEI:(req,res)=>{
+        res.render('detallePEI')
+    }
+}
+

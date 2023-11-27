@@ -1,0 +1,164 @@
+<section class="contenedorGeneralConsultaPEI" id="infoGestionRoles">
+    <div class="contenedorFormularioIPEI margin2" id="">
+        <h1 id="h1Consulta">Gestión de Roles</h1>
+        <button class="btn i88 BGblue" id="crearNewRol">Crear Nuevo Rol</button>
+        <button class="btn i88 BGblue" id="cerrarFormNewRol">Cerrar Formulario</button>
+
+        <form class="formRol" action="">
+
+            <div class="formCrearRol">
+                <label for="">Nombre del Rol*</label>
+                <input class="input inpIns" type="text" name="" id="">
+            </div>
+
+            <div class="funcionalidadesLista">
+                <div class="funcionalidadBlock">
+                    <label for="">Funcionalidad1</label>
+                    <input class="inp" type="checkbox" name="" id="">
+                </div>
+                <div class="funcionalidadBlock">
+                    <label for="">Funcionalidad2</label>
+                    <input class="inp" type="checkbox" name="" id="">
+                </div>
+                <div class="funcionalidadBlock">
+                    <label for="">Funcionalidad3</label>
+                    <input class="inp" type="checkbox" name="" id="">
+                </div>
+                <div class="funcionalidadBlock">
+                    <label for="">Funcionalidad4</label>
+                    <input class="inp" type="checkbox" name="" id="">
+                </div>
+                <div class="funcionalidadBlock">
+                    <label for="">Funcionalidad5</label>
+                    <input class="inp" type="checkbox" name="" id="">
+                </div>
+                <div class="funcionalidadBlock">
+                    <label for="">Funcionalidad6</label>
+                    <input class="inp" type="checkbox" name="" id="">
+                </div>
+                <div class="funcionalidadBlock">
+                    <label for="">Funcionalidad7</label>
+                    <input class="inp" type="checkbox" name="" id="">
+                </div>
+            </div>
+            <button class="BGgreen btn i88 ">Crear</button>
+        </form>
+
+        <div class="contenedorRol margin2">
+            <p>Inspector</p>
+            <div class="botonesRol">
+                <button class="btnAdj2 BGblue vava verFuncionalidadesBtn">Ver Funcionalidades</button>
+                <button class="btnAdj2 BGorange vava editarRol">Editar</button>
+                <button class="btnAdj2 BGred vava">Eliminar</button>
+            </div>
+            
+        </div>
+        <div class="funcionalidadesLista funlistxrol">
+            <div class="funcionalidadBlock">
+                <label for="">Funcionalidad1</label>
+                <input class="inp checkBoxFun" type="checkbox" name="" id="" disabled>
+            </div>
+            <div class="funcionalidadBlock">
+                <label for="">Funcionalidad2</label>
+                <input class="inp checkBoxFun" type="checkbox" name="" id="" disabled>
+            </div>
+            <div class="funcionalidadBlock">
+                <label for="">Funcionalidad3</label>
+                <input class="inp checkBoxFun" type="checkbox" name="" id="" disabled>
+            </div>
+            <div class="funcionalidadBlock">
+                <label for="">Funcionalidad4</label>
+                <input class="inp checkBoxFun" type="checkbox" name="" id="" disabled>
+            </div>
+            <div class="funcionalidadBlock">
+                <label for="">Funcionalidad5</label>
+                <input class="inp checkBoxFun" type="checkbox" name="" id="" disabled>
+            </div>
+            <div class="funcionalidadBlock">
+                <label for="">Funcionalidad6</label>
+                <input class="inp checkBoxFun" type="checkbox" name="" id="" disabled>
+            </div>
+            <div class="funcionalidadBlock">
+                <label for="">Funcionalidad7</label>
+                <input class="inp checkBoxFun" type="checkbox" name="" id="" disabled>
+            </div>
+        </div>
+        <button class="BGgreen btn i88 rcRoles">Realizar Cambios</button>
+        
+    </div>
+
+
+</section>
+
+<script>
+    // Codigo para mostrar funcionalidades de un rol existente,
+    // editar un rol
+
+    /* ESTE CODIGO ESTA INCOMPLETO Y SE DEBE AJUSTAR Y TERMINAR
+    LUEGO DE BASE DE DATOS (R) */
+
+    const verFuncionalidadesBtns = document.querySelector(".verFuncionalidadesBtn")/*R*/
+    const formFuncionalidades = document.querySelector(".funlistxrol")/*R*/
+    const editarRolBtn = document.querySelectorAll(".editarRol")/*R*/
+    const checkboxFuns = document.querySelectorAll(".checkBoxFun")/*R*/
+    const realizarCambiosBtn = document.querySelector(".rcRoles")/*R*/
+
+    realizarCambiosBtn.addEventListener("click",()=> {
+        realizarCambiosBtn.style.display = "none"
+            formFuncionalidades.style.display = "flex"
+            checkboxFuns.forEach(check => {
+                check.setAttribute("disabled","")
+            })
+    })
+
+    editarRolBtn.forEach(btn => {
+        btn.addEventListener("click",()=> {
+            realizarCambiosBtn.style.display = "flex"
+            formFuncionalidades.style.display = "flex"
+            checkboxFuns.forEach(check => {
+                check.removeAttribute("disabled","")
+            })
+        })
+    })
+
+    verFuncionalidadesBtns.addEventListener("click",()=> {
+        if(verFuncionalidadesBtns.innerText == "Ver Funcionalidades") {
+            verFuncionalidadesBtns.innerText = 'Ocultar Funcionalidades'
+            realizarCambiosBtn.style.display = "none"
+            formFuncionalidades.style.display = "flex"
+            checkboxFuns.forEach(check => {
+                check.setAttribute("disabled","")
+            })
+        } else {
+            verFuncionalidadesBtns.innerText = 'Ver Funcionalidades'
+            realizarCambiosBtn.style.display = "none"
+            formFuncionalidades.style.display = "none"
+            checkboxFuns.forEach(check => {
+                check.removeAttribute("disabled","")
+            })
+        }
+    })
+
+
+    // Codigo para mostrar y ocultar formulario "Crear Nuevo Rol"
+
+    const btnNewRol = document.getElementById("crearNewRol")
+    const formNewRol = document.querySelector(".formRol")
+    const btnCerrarNewRol = document.getElementById("cerrarFormNewRol")
+    
+    btnNewRol.addEventListener("click",()=> {
+        formNewRol.style.display = "flex"
+        btnNewRol.style.display = "none"
+        btnCerrarNewRol.style.display = "flex"
+    })
+
+    btnCerrarNewRol.addEventListener("click",()=> {
+        formNewRol.style.display = "none"
+        btnNewRol.style.display = "flex"
+        btnCerrarNewRol.style.display = "none"
+    })
+
+</script>
+
+
+

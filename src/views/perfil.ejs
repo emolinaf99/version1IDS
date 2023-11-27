@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Perfil</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Perfil</p></div>
+            <section class="infoArea">
+                
+                <div class="contenedorTotal" id="contenedorTotalPerfil">
+                    
+                    <div class="imgBlock">
+                        <p class="textImg">Cambiar Foto</p>
+                        <img src="/images/sinFoto.jpg" alt="">
+                    </div>
+                    <div class="bloqueInput">
+                        <label for="">Usuario:</label>
+                        <input disabled class="input i88" type="text" name="" id="">
+                    </div>
+                    <div class="bloqueInput">
+                        <label for="">Nombre:</label>
+                        <input disabled class="input i88" type="text" name="" id="">
+                    </div>
+                    <div class="bloqueInput">
+                        <label for="">Apellido:</label>
+                        <input disabled class="input i88" type="text" name="" id="">
+                    </div>
+                    <div class="bloqueInput">
+                        <label for="">Empresa:</label>
+                        <input disabled class="input i88" type="text" name="" id="">
+                    </div>
+                    <div class="bloqueInput">
+                        <label for="">Identificación:</label>
+                        <input disabled class="input i88" type="text" name="" id="">
+                    </div>
+                    <div class="bloqueInput">
+                        <label for="">Celular:</label>
+                        <input disabled class="input i88" type="text" name="" id="inputCelular">
+                    </div>
+                    <div class="bloqueInput">
+                        <label for="">Email:</label>
+                        <input disabled class="input i88" type="text" name="" id="inputEmail">
+                    </div>
+
+                    <button class="btn BGorange i88" id="botonEditarPerfil">Editar</button>
+                    <div class="areaBotones" id="areaBotonesPerfil">
+                        <button class="btn BGred" id="cancelarCambiosPerfil">Cancelar</button>
+                        <button class="btn BGgreen " id="botonSubirCambiosPerfil">Realizar Cambios</button>
+                        
+                    </div>
+                    
+                    
+                </div>
+
+            </section>
+        </section>
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+<script>
+    const btnCancelarEditar = document.querySelector("#cancelarCambiosPerfil")
+    const btnEditarPerfil = document.getElementById("botonEditarPerfil")
+    const inputEmail = document.getElementById("inputEmail")
+    const inputCelular = document.getElementById("inputCelular")
+    const areaBotonesPerfil = document.getElementById("areaBotonesPerfil")
+    const txtCambiarFoto = document.querySelector(".textImg")
+
+    btnCancelarEditar.addEventListener("click",()=> {
+        txtCambiarFoto.style.display = "none"
+        inputEmail.setAttribute("disabled","")
+        inputCelular.setAttribute("disabled","")
+        btnEditarPerfil.style.display = "flex"
+        areaBotonesPerfil.style.display = "none"
+    })
+
+    btnEditarPerfil.addEventListener("click",()=> {
+        txtCambiarFoto.style.display = "flex"
+        inputEmail.removeAttribute("disabled","")
+        inputCelular.removeAttribute("disabled","")
+        btnEditarPerfil.style.display = "none"
+        areaBotonesPerfil.style.display = "flex"
+    })
+</script>
+
+
+
+

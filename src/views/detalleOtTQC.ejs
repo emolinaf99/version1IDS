@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Orden de Trabajo TQC</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Orden de Trabajo TQC - 3229535</p></div>
+            <section class="infoArea">
+                
+                <div class="contenedorTotal" id="contenedorTotalOT">
+                    <section class="contenedorGeneralConsultaPEI" id="infoOTTQC">
+                        
+                        <div class="cont56">
+                            <div class="contenedorGrafico">
+                                <canvas id="myChart"></canvas>
+                                <h3>*Expresado en Unidades</h3>
+                            </div>
+                            <div class="contenedorInfoGrafico">
+                                <div class="bloque1OT">
+                                    <div class="bkd">
+                                        <label class="labelOT" for="">Empresa:</label>
+                                        <input readonly class="viewInputGris inp inpNoEdit" type="text" name="" id="">
+                                    </div>
+                                    <div class="bkd">
+                                        <label class="labelOT" for="">Fecha:</label>
+                                        <input readonly class="viewInputGris inp inpNoEdit" type="text" name="" id="">
+                                    </div>
+                                    <div class="bkd">
+                                        <label class="labelOT" for="">Fecha Inicio:</label>
+                                        <input readonly class="viewInputGris inp inpGra" type="text" name="" id="">
+                                    </div>
+                                    <div class="bkd">
+                                        <label class="labelOT" for="">Referencias:</label>
+                                        <input readonly class="viewInputGris inp inpGra" type="text" name="" id="">
+                                    </div>
+                        
+                                </div>
+                                <div class="bloque2OT">
+                                    <div class="bkd">
+                                        <label class="labelOT l2" for="">Resultado:</label>
+                            
+                                    </div>
+                                    <div class="bkd">
+                                        <label class="labelOT" for="">Cantidad Inspeccionada:</label>
+                                        <input readonly class="viewInputGris inp inpNoEdit" type="text" name="" id="">
+                                    </div>
+                                    <div class="bkd">
+                                        <label class="labelOT" for="">Cantidad Recuperada:</label>
+                                        <input readonly class="viewInputGris inp inpNoEdit" type="text" name="" id="">
+                                    </div>
+                                    <div class="bkd">
+                                        <label class="labelOT" for="">Cantidad Rechazada:</label>
+                                        <input readonly class="viewInputGris inp inpNoEdit" type="text" name="" id="">
+                                    </div>
+                        
+                                </div>
+                                <div class="bloque2OT">
+                                    
+                                    <div class="bkd">
+                                        <label class="labelOT l2" for="">Motivo de Inspección:</label>
+                                    </div>
+                                    <div class="bkd" style="width: 100%;">
+                                        <textarea readonly class=" taOT viewTextAreaGris" name="" id="" cols="30" rows="5" style="width: 100%;"></textarea>
+                                    </div>
+
+                                    <div class="areaBotones">
+                                        <button class="btn BGorange" id="editarInfoOT">Editar</button>
+                                        <button class="btn BGred" >Eliminar</button>
+                                        
+                                    </div>
+                                    <div class="botonesA bf3 formBtnsI">
+                                        <button type="button" class="btn btnAdmin BGyellow" id="atrasI">Volver</button>
+                                        <button type="submit" class="btn btnAdmin BGgreen" id="guardarCambiosI">Guardar</button>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="titlePage"><p>Inspecciones Relacionadas Con Orden de Trabajo</p></div>
+
+                        <!-- Por cada inspeccion relacionada con OT -->
+                        <div class="contenedorPEIResultado">
+                            <div class="blockResultado1 brInfo">
+                                <div class="renglonBl">
+                                    
+                                    <p class="negrita">Referencia: <span>751D19175R</span></p>
+                                </div>
+                                <div class="renglonBl">
+                                    
+                                    <p class="negrita">RAN: <span>751D19175R</span></p>
+                                </div>
+                                
+                            </div>
+                            <div class="blockResultado2 br">
+                                <a class="btnsResultados BGblue wdw15" href="/inspeccion">Ver Resultados</a>
+                                
+                            </div>
+                        </div> 
+                        
+                    </section>
+                    
+                </div>
+
+            </section>
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+<script>
+    const areaBotones = document.querySelector(".areaBotones")
+    const inputsEditables = document.querySelectorAll(".inpGra")
+    const btnEditarOT = document.getElementById("editarInfoOT")
+    const totalInputs = document.querySelectorAll(".inp")
+    const inputsNoEditables = document.querySelectorAll(".inpNoEdit")
+    const textAreaOT = document.querySelector(".taOT")
+    const botonesEditBlock = document.querySelector(".bf3")
+    const btnVoler = document.querySelector("#atrasI")
+
+    btnEditarOT.addEventListener("click",() => {
+
+        botonesEditBlock.style.display = "flex"
+        areaBotones.style.display = "none"
+
+        textAreaOT.classList.remove("viewTextAreaGris")
+        textAreaOT.classList.add("TextArea")
+        textAreaOT.removeAttribute("readonly",'')
+
+        inputsEditables.forEach(input => {
+            input.classList.add("input")
+            input.classList.remove("viewInputGris")
+            input.removeAttribute("readonly","")
+        })
+        totalInputs.forEach(input => {
+            input.classList.add("input")
+            input.classList.remove("viewInputGris")
+        })
+        inputsNoEditables.forEach(input => {
+            input.setAttribute("disabled",'')
+        })
+    })
+
+    btnVoler.addEventListener("click",() => {
+
+        botonesEditBlock.style.display = "none"
+        areaBotones.style.display = "flex"
+
+        textAreaOT.classList.add("viewTextAreaGris")
+        textAreaOT.classList.remove("TextArea")
+        textAreaOT.setAttribute("readonly",'')
+
+        inputsEditables.forEach(input => {
+            input.classList.remove("input")
+            input.classList.add("viewInputGris")
+            input.setAttribute("readonly","")
+        })
+        totalInputs.forEach(input => {
+            input.classList.remove("input")
+            input.classList.add("viewInputGris")
+        })
+        inputsNoEditables.forEach(input => {
+            input.removeAttribute("disabled",'')
+        })
+    })
+
+
+
+</script>
+
+<!-- Script relacionado al contenido del grafico-->
+<script>
+
+    const grafico = document.querySelector("#myChart")
+
+    grafico.style.width = "100px"
+    grafico.style.height = "100px"
+
+    new Chart("myChart", {
+        type: 'doughnut', 
+        data: {
+            labels: ['Cantidad Inspeccionada','Cantidad Recuperada','Cantidad Rechazada'],
+            datasets: [{
+                data: [null,20,80],
+                backgroundColor: ['#FCFCFC','#5B8FC8','#FFBD59'],
+            
+            }]
+        },
+        options: {
+            
+            legend: {
+                position: 'bottom',
+            },
+            plugins: {
+                doughnutlabel: {
+                    labels: [
+                        {
+                            text: 'Total',
+                            font: {
+                                size: '16',
+                                weight: 'bold',
+                            },
+                            color: '#14213D',
+                        },
+                        
+                        {
+                            text:'100',
+                            font: {
+                                size: '16',
+                                weight: 'bold',
+                            },
+                            color: '#14213D'
+                        }
+                    ]
+                },
+                labels: {
+                    render: 'value',
+                    fontSize: 18,
+                    fontColor: '#fff',
+                    fontStyle: 700,
+                }
+            }
+        }    
+    })
+
+
+
+</script>

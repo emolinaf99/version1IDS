@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Accidente Contenedor</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Accidente Contenedor - 1203453</p></div>
+            <section class="infoArea">
+                
+                <div class="contenedorTotal" id="contTotalAc">
+                    <section class="contenedorGeneralConsultaPEI" id="infoConsultaInspecciones">
+                        <div class="contenedorFormularioIPEI" id="encabezadoAcCont">
+                                <img class="imgContDetail" src="/images/numeroContenedor.png" alt="">
+                                <div class="fechaAcCont">
+                                    <label for="">Fecha:</label>
+                                    <input class="viewInput" style="width: 6.5rem;" type="text" name="" id="" value="28/04/2023">
+                                </div>
+                                                                   
+                        </div>
+                        
+                        <div class="contenedorFormularioIPEI2">
+                            <div class="titlePage asd"><p>Arrumes</p></div> 
+                    
+                            <!-- Por cada arrume registrado en el accidente el siguiente codigo -->
+                            <div class="contenedorArrume">
+                                <div class="blo1AcC">
+                                    <div class="imgBlockACC">
+                                        <img src="/images/SEGUNDA-ETAPA.png" alt="">
+                                        <div class="infoArrume">
+                                            <div class="blockF">
+                                                <label for="">Referencia:</label>
+                                                <input readonly class="inp viewInput inpEdt" type="text" name="" id="" value="R3487DJA34F">
+                                                
+                                            </div>
+                                            <div class="blockF">
+                                                <label for="">N° Arrume:</label>
+                                                <input readonly class="inp viewInput inpEdt" type="text" name="" id="" value="1">
+                                                
+                                            </div>
+                                            <div class="blockF">
+                                                <label for="">Filas:</label>
+                                                <input readonly class="inp viewInput inpEdt" type="text" name="" id="" value="3">
+                                                
+                                            </div>
+                                            <div class="blockF">
+                                                <label for="">Columnas:</label>
+                                                <input readonly class="inp viewInput inpEdt" type="text" name="" id="" value="3">
+                                                
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                    <div class="btnsArrumes">
+                                        <button class="btnsResultados BGblue verRanesBtn">Ver RANES</button>
+                                        <button class="btnsResultados BGorange editarArrumeBtn">Editar</button>
+                                        <button class="btnsResultados BGgreen guardarArrumeBtn">Guardar</button>
+                                    </div>
+                                </div>
+
+                                <!-- Por cada RAN asociado al arrume -->
+                                <div class="RANBlock">
+                                    <div class="blo2AcC">
+                                        <div class="infoArrume">
+                                            <div class="blockF">
+                                                <label for="">RAN:</label>
+                                                <input class="inp viewInput inpRan" type="text" name="" id="" value="R34754GJ34DF">
+                                                
+                                            </div>
+                                            <div class="blockF">
+                                                <label for="">Columna:</label>
+                                                <input class="inp viewInput inpRan" type="text" name="" id="" value="1">
+                                                
+                                            </div>
+                                            <div class="blockF">
+                                                <label for="">Fila:</label>
+                                                <input class="inp viewInput inpRan" type="text" name="" id="" value="1">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="observacionesBlock">
+                                            <label class="br" for="">Observaciones:</label>
+                                            <textarea readonly class="textAreaRan viewTextArea" name="" id="" cols="30" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="btnsArrumesRAN">
+                                        <button class="btnsResultados BGblue btnVerRan" id="" >Ver Foto RAN</button>
+                                        <button class="btnsResultados BGblue btnVerMat" id="">Ver Foto Material</button>
+                                        <button class="btnsResultados BGorange btnEditarRAN" id="" >Editar</button>
+                                        <button class="btnsResultados BGgreen guardarRanBtn">Guardar</button>
+                                    </div>
+
+
+                                    <div class="totalContenedorFoto totalContenedorFotoRAN">
+                                        <div class=" fotoAmpliada fotoRAN" id="">
+                                            <i class="fa-solid fa-xmark equis equisFotos" id=""></i>
+                                            <img src="/images/mokey.jpg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="totalContenedorFoto totalContenedorFotoMat">
+                                        <div class=" fotoAmpliada fotoRAN" id="">
+                                            <i class="fa-solid fa-xmark equis equisFotos" id=""></i>
+                                            <img src="/images/rino.jpg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </section>
+                    
+                    
+                    
+                </div>
+
+            </section>
+        </section>
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+<!-- Script de RANES-->
+<script>
+    const btnVerRan = document.querySelector('.btnVerRan')
+    const btnVerMaterial = document.querySelector('.btnVerMat')
+    const btnEditarRan = document.querySelector('.btnEditarRAN')
+    const contFotoRAN = document.querySelector(".totalContenedorFotoRAN")
+    const contFotoMaterial = document.querySelector('.totalContenedorFotoMat')
+    const equisFotos = document.querySelectorAll('.equisFotos')
+    const inputsRan = document.querySelectorAll('.inpRan')
+    const textAreaRan = document.querySelector('.textAreaRan')
+    const btnGuardarRan = document.querySelector('.guardarRanBtn')
+
+
+    btnEditarRan.addEventListener('click',()=> {
+        btnEditarRan.style.display = 'none'
+        btnGuardarRan.style.display = 'flex'
+        textAreaRan.removeAttribute('readonly','')
+        textAreaRan.classList.remove('viewTextArea')
+        textAreaRan.classList.add('textArea')
+        inputsRan.forEach(input => {
+            input.removeAttribute("readonly",'')
+            input.classList.remove("viewInput")
+            input.classList.add('input')
+        })
+          
+    })
+
+    btnGuardarRan.addEventListener('click',()=> {
+        btnEditarRan.style.display = 'flex'
+        btnGuardarRan.style.display = 'none'
+        textAreaRan.setAttribute('readonly','')
+        textAreaRan.classList.add('viewTextArea')
+        textAreaRan.classList.remove('textArea')
+        inputsRan.forEach(input => {
+            input.setAttribute("readonly",'')
+            input.classList.add("viewInput")
+            input.classList.remove('input')
+        })
+    })
+    
+
+    btnVerMaterial.addEventListener('click',()=> {
+        contFotoMaterial.style.display = 'flex'
+        contFotoRAN.style.display = 'none';
+        fondoOpacity.style.display = "flex"
+    })
+    
+    // Al dar Clic en "Ver RAN"
+
+    btnVerRan.addEventListener("click",()=> {
+        contFotoMaterial.style.display = 'none'
+        contFotoRAN.style.display = 'flex';
+        fondoOpacity.style.display = "flex"
+    })
+
+    // Al dar clic en cada equis
+
+    equisFotos.forEach(equis => {
+        equis.addEventListener('click',()=> {
+            contFotoMaterial.style.display = 'none'
+            contFotoRAN.style.display = 'none';
+            fondoOpacity.style.display = "none"
+        })
+    })
+
+    //Al dar click en el Fondo oscuro transparente
+
+    fondoOpacity.addEventListener('click',()=> {
+        contFotoMaterial.style.display = 'none'
+        contFotoRAN.style.display = 'none';
+        fondoOpacity.style.display = "none"
+    })
+
+</script>
+
+<!-- Script de Arrumes -->
+<script>
+    const btnVerRanes = document.querySelector(".verRanesBtn")
+    const infoRANES = document.querySelectorAll(".RANBlock")
+    const arrumeBlock = document.querySelector(".blo1AcC")
+    const editarBtn = document.querySelector(".editarArrumeBtn")
+    const inputsEditables = document.querySelectorAll(".inpEdt")
+    const btnGuardar = document.querySelector(".guardarArrumeBtn")
+
+    // Cuando el btn "Editar" escucha click
+
+    editarBtn.addEventListener("click",() => {
+        btnGuardar.style.display = 'flex'
+        editarBtn.style.display = 'none'
+        inputsEditables.forEach(input => {
+            input.removeAttribute("readonly",'')
+            input.classList.remove("viewInput")
+            input.classList.add('input')
+        })
+    })
+
+    // Cuando el Btn "Guardar" escucha click
+
+    btnGuardar.addEventListener("click",() => {
+        btnGuardar.style.display = 'none'
+        editarBtn.style.display = 'flex'
+        inputsEditables.forEach(input => {
+            input.setAttribute("readonly",'')
+            input.classList.add("viewInput")
+            input.classList.remove('input')
+        })
+    })
+
+    // Cuando el btn "Ver RANES" escucha click
+    btnVerRanes.addEventListener("click",()=> {
+
+        if(btnVerRanes.innerText == "Ver RANES") {
+            btnVerRanes.innerText = "Ocultar RANES"
+            arrumeBlock.classList.add("boxShadow")
+            infoRANES.forEach(RANblock => {
+                RANblock.style.display = 'flex'
+            })
+        } else {
+            btnVerRanes.innerText = "Ver RANES"
+            arrumeBlock.classList.remove("boxShadow")
+            infoRANES.forEach(RANblock => {
+                RANblock.style.display = 'none'
+            })
+        }
+        
+
+        
+    })
+</script>

@@ -1,0 +1,13 @@
+.br {
+    margin-right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.brInfo {
+    width: 70%;
+}
+
+.wd15 {
+    width: 8rem;
+}

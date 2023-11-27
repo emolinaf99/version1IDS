@@ -1,0 +1,121 @@
+/*@import url(normalize.css);*/
+@import url(reset.css);
+@import url(formularioCrearPiezasInspeccion.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(ingreso.css);
+@import url(consultaPEI.css);
+@import url(alertaPEI.css);
+@import url(crearInspeccion.css);
+@import url(consultaInspecciones.css);
+@import url(consultaOtTQC.css);
+@import url(crearOtInterna.css);
+@import url(detalleInspeccion.css);
+@import url(ingresarAccidentesContenedores.css);
+@import url(perfil.css);
+@import url(cambioContrasena.css);
+@import url(funcionesDeRol.css);
+@import url(detalleOtTQC.css);
+@import url(detalleAccidenteContenedor.css);
+@import url(detalleCotizacion.css);
+@import url(detallePEI.css);
+@import url(not-found.css);
+
+
+/* Colores predeterminados */
+
+.BGblue {
+    background-color:#5B8FC8 ;
+}
+
+.BGgreen {
+    background-color: #7BB463;
+}
+
+.BGred {
+    background-color: #EE6546;
+}
+
+.BGyellow {
+    background-color: #FFBD59;
+}
+
+.BGorange {
+    background-color: #D7972E;
+}
+
+.BGgrisClaro {
+    background-color: #F6F6F6;
+}
+
+
+/* Para darle nombre a una fuente dentro del proyecto no existente en el sistema */
+
+@font-face {
+    font-family: "Heebo";
+    src: url(/fonts/Heebo-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/fonts/Inter-VariableFont_slnt,wght.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+}
+
+p {
+    margin-bottom: 0rem;
+}
+
+li {
+    list-style: none;
+}
+
+textarea {
+    border: 1px solid #D0D3D8;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 0.5rem;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+body{
+    font-family: 'Inter';
+    background-color: #FFF;
+    width: 100vw;
+    background-color: #D0D3D8 ;
+    overflow-x: hidden;
+    font-weight: 300;
+}
+
+a {
+    white-space: wrap;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+input:focus {
+    outline: none;
+}
+select:focus {
+    outline: none;
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+}

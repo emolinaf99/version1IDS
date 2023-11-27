@@ -1,0 +1,766 @@
+.formCrearProveedor {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.vava {
+    height: 2.2rem ;
+}
+
+.blockform {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+.margin2 { 
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.none {
+    display: none;
+}
+
+#infoCrearProveedor,#infoCrearUsuario, #infoCrearCotizacion, #infoBuscarUsuario, #infoBuscarUsuario, #infoGestionRoles {
+    display: none;
+}
+
+.cont1CrearCot {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    grid-template-columns: 90%;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.textAreaCont {
+    padding-top: 2rem;
+    
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.blockCot {
+    width: 100%;
+}
+
+.btnAdj3 {
+    width: 90%;
+    padding: 0.3rem;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+#contenedorOpcionesFunRol {
+    display: grid;
+    grid-template-columns: 9rem 9rem;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+#infoBuscarUsuario {
+    display: none;
+}
+
+.contenedorx {
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #D0D3D8;
+}
+
+.blockImgEdt {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+#barraBusquedaUser {
+    width: 90%;
+}
+
+.contenedorGeneralUsuarios {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 35rem;
+    max-height: 35rem;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.areaBotones {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
+
+.contenedorUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #D0D3D8;
+}
+
+.imgBlockUser {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.imgUserFunRol {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.nameAndDepartament {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.nameUserSearch {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.departamentUser {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.formCrearRol {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+.funcionalidadesLista {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.3rem;
+    max-height: 15rem;
+    overflow-x: scroll;
+}
+
+.funcionalidadBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.formRol {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contenedorRol {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#F6F6F6  ;
+    border: 1px solid #D0D3D8;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.rcRoles {
+    display: none;
+}
+
+.contenedorRol p {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.botonesRol {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#cerrarFormNewRol {
+    display: none;
+}
+
+.funlistxrol {
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .formCrearProveedor {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .blockform {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    
+    .margin2 { 
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .none {
+        display: none;
+    }
+    
+    #infoCrearProveedor,#infoCrearUsuario, #infoCrearCotizacion, #infoBuscarUsuario, #infoBuscarUsuario, #infoGestionRoles {
+        display: none;
+    }
+    
+    .cont1CrearCot {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: flex-end;
+        grid-template-columns: 45% 45%;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .textAreaCont {
+        padding-top: 2rem;
+        
+        width: 92%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .blockCot {
+        width: 100%;
+    }
+    
+    .btnAdj3 {
+        width: 90%;
+        padding: 0.3rem;
+        color: white;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        height: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+    
+    #contenedorOpcionesFunRol {
+        display: grid;
+        grid-template-columns: 10rem 10rem 10rem;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    
+    #infoBuscarUsuario {
+        display: none;
+    }
+    
+    .contenedorx {
+        width: 100%;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #D0D3D8;
+    }
+    
+    .blockImgEdt {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+    
+    #barraBusquedaUser {
+        width: 40%;
+    }
+    
+    .contenedorGeneralUsuarios {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 35rem;
+        max-height: 35rem;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    
+    .areaBotones {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem 2rem;
+    }
+    
+    .contenedorUser {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 1rem 1rem;
+        border-bottom: 1px solid #D0D3D8;
+    }
+    
+    .imgBlockUser {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        width: 50%;
+    }
+    
+    .imgUserFunRol {
+        width: 100px;
+        border-radius: 50%;
+    }
+    
+    .nameAndDepartament {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .nameUserSearch {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    .departamentUser {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    
+    .formCrearRol {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    
+    .funcionalidadesLista {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.3rem;
+        max-height: 15rem;
+        overflow-x: scroll;
+    }
+    
+    .funcionalidadBlock {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+    
+    .formRol {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .contenedorRol {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:#F6F6F6  ;
+        border: 1px solid #D0D3D8;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        padding: 1rem;
+        gap: 2rem;
+    }
+    
+    .rcRoles {
+        display: none;
+    }
+    
+    .contenedorRol p {
+        font-weight: 400;
+        font-size: 18px;
+    }
+    
+    .botonesRol {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .vava {
+        height: 3rem;
+    }
+    
+    #cerrarFormNewRol {
+        display: none;
+    }
+    
+    .funlistxrol {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1280px) {
+
+    .vava {
+        height: 2.2rem ;
+    }
+
+    .formCrearProveedor {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .blockform {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    
+    .margin2 { 
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .none {
+        display: none;
+    }
+    
+    #infoCrearProveedor,#infoCrearUsuario, #infoCrearCotizacion, #infoBuscarUsuario, #infoBuscarUsuario, #infoGestionRoles {
+        display: none;
+    }
+    
+    .cont1CrearCot {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: flex-start;
+        grid-template-columns: 45% 45%;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .textAreaCont {
+        padding-top: 2rem;
+        
+        width: 92%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .blockCot {
+        width: 100%;
+    }
+    
+    .btnAdj3 {
+        width: 90%;
+        padding: 0.3rem;
+        color: white;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        height: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+    
+    #contenedorOpcionesFunRol {
+        display: grid;
+        grid-template-columns: 15rem 15rem 15rem;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    
+    #infoBuscarUsuario {
+        display: none;
+    }
+    
+    .contenedorx {
+        width: 100%;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #D0D3D8;
+    }
+    
+    .blockImgEdt {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+    
+    #barraBusquedaUser {
+        width: 60%;
+    }
+    
+    .contenedorGeneralUsuarios {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 35rem;
+        max-height: 35rem;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    
+    .areaBotones {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem 2rem;
+    }
+    
+    .contenedorUser {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 1rem 1rem;
+        border-bottom: 1px solid #D0D3D8;
+    }
+    
+    .imgBlockUser {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        width: 50%;
+    }
+    
+    .imgUserFunRol {
+        width: 100px;
+        border-radius: 50%;
+    }
+    
+    .nameAndDepartament {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .nameUserSearch {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    .departamentUser {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    
+    .formCrearRol {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    
+    .funcionalidadesLista {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.3rem;
+        max-height: 15rem;
+        overflow-x: scroll;
+    }
+    
+    .funcionalidadBlock {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+    
+    .formRol {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .contenedorRol {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:#F6F6F6  ;
+        border: 1px solid #D0D3D8;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        padding: 1rem;
+        gap: 2rem;
+    }
+    
+    .rcRoles {
+        display: none;
+    }
+    
+    .contenedorRol p {
+        font-weight: 400;
+        font-size: 18px;
+    }
+    
+    .botonesRol {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    #cerrarFormNewRol {
+        display: none;
+    }
+    
+    .funlistxrol {
+        display: none;
+    }
+    
+}

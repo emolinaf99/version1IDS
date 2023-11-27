@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Cambio de Contraseña</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Cambio de Contraseña</p></div>
+            <section class="infoArea" id="infoAreaContr">
+                
+                <div class="contenedorTotal" id="contenedorTotalCambio">
+                    <div class="blockInputContrasena">
+                        <label for="">Contraseña Actual</label>
+                        <input class="input inpIns" type="password" name="" id="antContrasena">
+                        <span class="ojitosContrasena">
+                            <i id="mostrarContrasenaAnterior" class="fa fa-eye" title="Ocultar contraseña"></i>
+                            <i id="ocultarContrasenaAnterior" class="fa fa-eye-slash" title="Mostrar contraseña"></i>
+                        </span>
+                    </div>
+                    <div class="blockInputContrasena">
+                        <label for="">Contraseña Nueva</label>
+                        <input class="input inpIns" type="password" name="" id="newContrasena">
+                        <span class="ojitosContrasena">
+                                <i id="mostrarContrasenaNueva" class="fa fa-eye" title="Ocultar contraseña"></i>
+                                <i id="ocultarContrasenaNueva" class="fa fa-eye-slash" title="Mostrar contraseña"></i>
+                            </span>
+                    </div>
+                    <div class="blockInputContrasena">
+                        <label for="">Confirmar Contraseña</label>
+                        <input class="input inpIns" type="password" name="" id="confirmNewContrasena">
+                        <span class="ojitosContrasena">
+                            <i id="mostrarConfirmacionContrasena" class="fa fa-eye" title="Ocultar contraseña"></i>
+                            <i id="ocultarConfirmacionContrasena" class="fa fa-eye-slash"
+                            title="Mostrar contraseña"></i>
+                        </span>
+                    </div>
+
+                    <button class="btn BGblue i88 jojo" id="">Cambiar Contraseña</button>
+                    
+                </div>
+
+                
+
+            </section>
+        </section>
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+<!-- js ojo de contraseña-->
+<script>
+    // Ejecutando funciones contraseña anterior
+    document.getElementById("ocultarContrasenaAnterior").addEventListener("click",mostrarContrasenaAnteriorFun);
+    document.getElementById("mostrarContrasenaAnterior").addEventListener("click",ocultarContrasenaAnteriorFun);
+    
+
+    // Declarando variables contraseña anterior
+    const mostrarContrasenaAnterior = document.getElementById("mostrarContrasenaAnterior");
+    const ocultarContrasenaAnterior = document.getElementById("ocultarContrasenaAnterior");
+    const contrasenaAnterior = document.getElementById("antContrasena");
+
+
+    // Funcion para mostrar contraseña anterior
+    function mostrarContrasenaAnteriorFun() {
+        contrasenaAnterior.type ="text"
+        ocultarContrasenaAnterior.style.display = "none"
+        mostrarContrasenaAnterior.style.display = "block"
+    }
+
+    // Función para ocultar contraseña anterior
+    function ocultarContrasenaAnteriorFun() {
+        contrasenaAnterior.type ="password"
+        ocultarContrasenaAnterior.style.display = "block"
+        mostrarContrasenaAnterior.style.display = "none"
+    }
+
+
+    //----------------------------------------------------------------------------------------------------------------------
+
+
+    // Ejecutando funciones contraseña Nueva
+    document.getElementById("ocultarContrasenaNueva").addEventListener("click",mostrarContrasenaNuevaFun);
+    document.getElementById("mostrarContrasenaNueva").addEventListener("click",ocultarContrasenaNuevaFun);
+    
+
+    // Declarando variables contraseña Nueva
+    const mostrarContrasenaNueva = document.getElementById("mostrarContrasenaNueva");
+    const ocultarContrasenaNueva = document.getElementById("ocultarContrasenaNueva");
+    const contrasenaNueva = document.getElementById("newContrasena");
+
+
+    // Funcion para mostrar contraseña Nueva
+    function mostrarContrasenaNuevaFun() {
+        contrasenaNueva.type ="text"
+        ocultarContrasenaNueva.style.display = "none"
+        mostrarContrasenaNueva.style.display = "block"
+    }
+
+    // Función para ocultar contraseña Nueva
+    function ocultarContrasenaNuevaFun() {
+        contrasenaNueva.type ="password"
+        ocultarContrasenaNueva.style.display = "block"
+        mostrarContrasenaNueva.style.display = "none"
+    }
+
+    //---------------------------------------------------------------------------------------------------------------------
+
+    // Ejecutando funciones  confirmacion contraseña Nueva
+    document.getElementById("ocultarConfirmacionContrasena").addEventListener("click",mostrarConfirmacionContrasenaNuevaFun);
+    document.getElementById("mostrarConfirmacionContrasena").addEventListener("click",ocultarConfirmacionContrasenaNuevaFun);
+    
+
+    // Declarando variables confirmacion contraseña Nueva
+    const mostrarConfirmacionContrasenaNueva = document.getElementById("mostrarConfirmacionContrasena");
+    const ocultarConfirmacionContrasenaNueva = document.getElementById("ocultarConfirmacionContrasena");
+    const confirmacionContrasenaNueva = document.getElementById("confirmNewContrasena");
+
+
+    // Funcion para mostrar confirmacion contraseña Nueva
+    function mostrarConfirmacionContrasenaNuevaFun() {
+        confirmacionContrasenaNueva.type ="text"
+        ocultarConfirmacionContrasenaNueva.style.display = "none"
+        mostrarConfirmacionContrasenaNueva.style.display = "block"
+    }
+
+    // Función para ocultar confirmacion contraseña Nueva
+    function ocultarConfirmacionContrasenaNuevaFun() {
+        confirmacionContrasenaNueva.type ="password"
+        ocultarConfirmacionContrasenaNueva.style.display = "block"
+        mostrarConfirmacionContrasenaNueva.style.display = "none"
+    }
+</script>
+
+
+
+

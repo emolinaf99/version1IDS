@@ -1,0 +1,329 @@
+.contenedorGrafico {
+    width: 100%;
+    height: auto;
+    padding-top: 1rem;
+}
+
+.contenedorInfoGrafico {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #F5f5f5 ;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#infoOTTQC {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont56 {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.bloque1OT {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.2rem;
+}
+
+.bkd {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+.labelOT {
+    font-weight: 500;
+    color: #14213D;
+    font-size: 14px;
+}
+
+.bloque2OT {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.l2 {
+    font-weight: 800;
+}
+
+.viewInputGris {
+    background-color: #F5f5f5;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 2rem;
+    padding-left: 0.5rem;
+}
+
+.viewTextAreaGris {
+    height: fit-content;
+    width: 100%;
+    border: 0px solid #D0D3D8;
+    background-color: #f5f5f5;
+}
+
+.bf3 {
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
+
+.contenedorGrafico h3 {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    color: #14213D;
+}
+
+
+@media screen and (min-width:768px) {
+
+    .contenedorGrafico {
+        width: 50%;
+        height: auto;
+    }
+    
+    .contenedorInfoGrafico {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 2rem;
+        background-color: #F5f5f5 ;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    
+    #infoOTTQC {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cont56 {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+    
+    .bloque1OT {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+    
+    .bkd {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    
+    .labelOT {
+        font-weight: 500;
+        color: #14213D;
+        font-size: 14px;
+    }
+    
+    .bloque2OT {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .l2 {
+        font-weight: 800;
+    }
+    
+    .viewInputGris {
+        background-color: #F5f5f5;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        height: 2rem;
+        padding-left: 0.5rem;
+    }
+    
+    .viewTextAreaGris {
+        height: fit-content;
+        width: 100%;
+        border: 0px solid #D0D3D8;
+        background-color: #f5f5f5;
+    }
+    
+    .bf3 {
+        gap: 2rem;
+        padding: 1rem 2rem;
+    }
+    
+    .contenedorGrafico h3 {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 600;
+        color: #14213D;
+    }
+}
+
+
+@media screen and (min-width:1280px) {
+    .contenedorGrafico {
+        width: 40%;
+        height: auto;
+    }
+    
+    .contenedorInfoGrafico {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 2rem;
+        background-color: #F5f5f5 ;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    
+    #infoOTTQC {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cont56 {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+    
+    .bloque1OT {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+    
+    .bkd {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .labelOT {
+        font-weight: 500;
+        color: #14213D;
+        font-size: 14px;
+    }
+    
+    .bloque2OT {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .l2 {
+        font-weight: 800;
+    }
+    
+    .viewInputGris {
+        background-color: #F5f5f5;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        height: 2rem;
+        padding-left: 0.5rem;
+    }
+    
+    .viewTextAreaGris {
+        height: fit-content;
+        width: 100%;
+        border: 0px solid #D0D3D8;
+        background-color: #f5f5f5;
+    }
+    
+    .bf3 {
+        gap: 2rem;
+        padding: 1rem 2rem;
+    }
+    
+    .contenedorGrafico h3 {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 600;
+        color: #14213D;
+    }
+
+    .wdw15 {
+        height: 2.2rem;
+    }
+}
+
+
+

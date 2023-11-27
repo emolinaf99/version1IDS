@@ -1,0 +1,504 @@
+.contenedorDetailInsp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around ;
+    
+}
+
+.contenedorFotosInspeccion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 1rem;
+    order: 2;
+}
+
+.selectorFtBlock {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    /*box-shadow: 1px 1px 1px rgba(0, 0, 0, .16);*/
+}
+
+.selectorFtBlock h2 {
+    color:#14213D ;
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.contOpt {
+    display: grid;
+    grid-template-columns: 10rem 10rem;
+    grid-template-rows: 0.5rem;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnFotos {
+    color: #14213D;
+    padding: 0.5rem;
+    border: 1px solid #D0D3D8;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: #F6F6F6;
+    font-size: 16px;
+    width: 10rem;
+    font-weight: 300;
+}
+
+.fotosBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fotosBlock img {
+    width: 100%;
+}
+
+.contenedorInfoInspec {
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    order: 1;
+}
+
+.formEditInsp {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start ;
+    align-items: flex-start;
+    gap: 2rem;
+    font-size: 14px;
+}
+
+.formEditInsp label {
+    font-weight: 600;
+    width: max-content;
+    color: #14213D;
+}
+
+.cont1DetailInsp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.containerInpInsp {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start ;
+    align-items: center;
+    gap: 1rem;
+}
+
+.containerInpInspRes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.inpInspResBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.viewInput {
+    background-color: #FCFCFC;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 2rem;
+    padding-left: 0.5rem;
+    min-width: 9rem;
+    width: 9rem;
+}
+
+.botonesA {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    gap: 1rem;
+}
+
+.btnAdmin {
+    color: white;
+    padding: 0.5rem;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: #F6F6F6;
+    font-size: 16px;
+    width: 10rem;
+    font-weight: 300;
+}
+
+.viewTextArea {
+    height: fit-content;
+    width: 100%;
+    border: 0px solid #D0D3D8;
+    background-color: transparent;
+}
+
+.formBtnsI {
+    display: none;
+}
+
+.it {
+    width: 100%;
+}
+
+.input100 {
+    width: 100%;
+}
+
+.selectedBorder {
+    border: 2px solid #5B8FC8;
+}
+
+.fotoRanSofasa {
+    display: none;
+    width: 100%;
+}
+
+#fotoRANSofasa {
+    display: flex;
+}
+
+#fotosDefectos {
+    display: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-right: 0%;
+}
+
+.mostrarRight {
+    display: none;
+    position: absolute;
+    top: 45%;
+    right: 1rem;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.mostrarLeft {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 1rem;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.mostrarLeft:hover, .mostrarRight:hover {
+    transform: scale(1.2);
+}
+
+.imgDef {
+    width: 100%;
+}
+
+
+@media screen and (min-width:768px) {
+
+    .contenedorDetailInsp {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around ;
+        gap: 2rem;
+    }
+    
+    .contenedorFotosInspeccion {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .selectorFtBlock {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem 2rem;
+        border: 1px solid #D0D3D8;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        /*box-shadow: 1px 1px 1px rgba(0, 0, 0, .16);*/
+    }
+    
+    .selectorFtBlock h2 {
+        color:#14213D ;
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+    
+    .contOpt {
+        display: grid;
+        grid-template-columns: 10rem 10rem;
+        grid-template-rows: 0.5rem;
+        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .btnFotos {
+        color: #14213D;
+        padding: 0.5rem;
+        border: 1px solid #D0D3D8;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        background-color: #F6F6F6;
+        font-size: 16px;
+        width: 10rem;
+        font-weight: 300;
+    }
+    
+    .fotosBlock {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .fotosBlock img {
+        width: 100%;
+    }
+    
+    .contenedorInfoInspec {
+        width: 90%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border: 1px solid #D0D3D8;
+    }
+    
+    .formEditInsp {
+        width: 100%;
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start ;
+        align-items: flex-start;
+        gap: 2rem;
+        font-size: 14px;
+    }
+    
+    .formEditInsp label {
+        font-weight: 600;
+        width: max-content;
+        color: #14213D;
+    }
+    
+    .cont1DetailInsp {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .containerInpInsp {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-start ;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .containerInpInspRes {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .inpInspResBlock {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .viewInput {
+        background-color: #FCFCFC;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        height: 2rem;
+        padding-left: 0.5rem;
+    }
+    
+    .botonesA {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+    }
+    
+    .btnAdmin {
+        color: white;
+        padding: 0.5rem;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        background-color: #F6F6F6;
+        font-size: 16px;
+        width: 10rem;
+        font-weight: 300;
+    }
+    
+    .viewTextArea {
+        height: fit-content;
+        width: 100%;
+        border: 0px solid #D0D3D8;
+        background-color: #FCFCFC;
+    }
+    
+    .formBtnsI {
+        display: none;
+    }
+    
+    .it {
+        width: 100%;
+    }
+    
+    .input100 {
+        width: 100%;
+    }
+    
+    .selectedBorder {
+        border: 2px solid #5B8FC8;
+    }
+    
+    .fotoRanSofasa {
+        display: none;
+        width: 100%;
+    }
+    
+    #fotoRANSofasa {
+        display: flex;
+    }
+    
+    #fotosDefectos {
+        display: none;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        margin-right: 0%;
+    }
+    
+    .mostrarRight {
+        display: none;
+        position: absolute;
+        top: 45%;
+        right: 1rem;
+        font-size: 50px;
+        color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .mostrarLeft {
+        display: none;
+        position: absolute;
+        top: 45%;
+        left: 1rem;
+        font-size: 50px;
+        color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .mostrarLeft:hover, .mostrarRight:hover {
+        transform: scale(1.2);
+    }
+    
+    .imgDef {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:1280px) {
+
+    .contenedorDetailInsp {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .contenedorFotosInspeccion {
+        width: 45%;
+    }
+
+    .contenedorInfoInspec { 
+     width: 45%;
+    }
+}

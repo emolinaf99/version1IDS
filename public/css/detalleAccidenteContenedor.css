@@ -1,0 +1,568 @@
+.imgContDetail {
+    width: 300px;
+    order: 2;
+}
+
+#contTotalAc {
+    width: 95%;
+}
+
+#encabezadoAcCont {
+    position: relative;
+}
+
+.fechaAcCont {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    right: 2rem;
+    order: 1;
+}
+
+.fechaAcCont label {
+    font-weight: 600;
+}
+
+.contenedorArrume {
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    width: 100%;
+}
+
+.imgBlockACC {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.imgBlockACC img {
+    width: 200px;
+}
+
+.infoArrume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 250px;
+}
+
+.observacionesBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 20rem;
+}
+
+.observacionesBlock label {
+    font-weight: 600;
+    color: #14213D;
+}
+
+.blockF {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    height: fit-content;
+}
+
+.blockF label {
+    font-weight: 600;
+    color: #14213D ;
+    width: max-content;
+}
+
+.blo1AcC {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #D5D5D5;
+}
+
+.btnsArrumes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.3rem;
+    margin-top: 1rem;
+}
+
+.btnsArrumesRAN {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.3rem;
+}
+
+.btnsArrumesRAN button {
+    width: 10rem;
+}
+
+.btnsArrumes button {
+    width: 15rem;
+}
+
+.RANBlock {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #D5D5D5;
+    gap: 1rem;
+}
+
+
+.blo2AcC {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 2rem;
+}
+
+.boxShadow {
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, .16);
+}
+
+.guardarArrumeBtn, .guardarRanBtn {
+    display: none;
+}
+
+.totalContenedorFoto {
+    position: fixed;
+    width:100%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 8rem;
+    left: 0;
+    z-index: 99;
+   
+}
+
+.fotoAmpliada {
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    z-index: 12;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+}
+
+.fotoAmpliada > img {
+    width: 300px;
+}
+
+.equisFotos {
+    color: rgba(255, 255, 255, 0.3); ;
+}
+
+.equisFotos:hover, .equisFotos:focus {
+    transform: scale(1.1);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+@media screen and (min-width:768px) {
+    .imgContDetail {
+        width: 250px;
+    }
+    
+    #contTotalAc {
+        width: 100%;
+    }
+    
+    #encabezadoAcCont {
+        position: relative;
+    }
+    
+    .fechaAcCont {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .fechaAcCont label {
+        font-weight: 600;
+    }
+    
+    .contenedorArrume {
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .imgBlockACC {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .imgBlockACC img {
+        width: 200px;
+    }
+    
+    .infoArrume {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: fit-content;
+    }
+    
+    .observacionesBlock {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: fit-content;
+    }
+    
+    .blockF {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        height: fit-content;
+    }
+    
+    .blockF label {
+        font-weight: 600;
+        color: #14213D ;
+        width: max-content;
+    }
+    
+    .blo1AcC {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #D5D5D5;
+    }
+    
+    .btnsArrumes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 0.3rem;
+        margin-top: 0rem;
+    }
+    
+    .btnsArrumesRAN {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 0.3rem;
+    }
+    
+    .btnsArrumesRAN button {
+        width: 10rem;
+    }
+    
+    .btnsArrumes button {
+        width: 10rem;
+    }
+    
+    .RANBlock {
+        width: 100%;
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #D5D5D5;
+    }
+    
+    
+    .blo2AcC {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        gap: 2rem;
+    }
+    
+    .boxShadow {
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, .16);
+    }
+    
+    .guardarArrumeBtn, .guardarRanBtn {
+        display: none;
+    }
+    
+    .totalContenedorFoto {
+        position: fixed;
+        width:100%;
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        top: 8rem;
+        left: 0;
+        z-index: 99;
+       
+    }
+    
+    .fotoAmpliada {
+        position: relative;
+        width: 50rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        z-index: 12;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    }
+    
+    .fotoAmpliada > img {
+        width: 500px;
+    }
+    
+    .equisFotos {
+        color: rgba(255, 255, 255, 0.3); ;
+    }
+    
+    .equisFotos:hover, .equisFotos:focus {
+        transform: scale(1.1);
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+}
+
+@media screen and (min-width:1280px) {
+    .imgContDetail {
+        width: 300px;
+    }
+    
+    #contTotalAc {
+        width: 80%;
+    }
+    
+    #encabezadoAcCont {
+        position: relative;
+    }
+    
+    .fechaAcCont {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0rem;
+    }
+    
+    .fechaAcCont label {
+        font-weight: 600;
+    }
+    
+    .contenedorArrume {
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .imgBlockACC {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .imgBlockACC img {
+        width: 200px;
+    }
+    
+    .infoArrume {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: fit-content;
+    }
+    
+    .observacionesBlock {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 20rem;
+    }
+    
+    .blockF {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        height: fit-content;
+    }
+    
+    .blockF label {
+        font-weight: 600;
+        color: #14213D ;
+        width: max-content;
+    }
+    
+    .blo1AcC {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 3rem;
+        border-bottom: 1px solid #D5D5D5;
+    }
+    
+    .btnsArrumes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 0.3rem;
+        margin-top: 0rem;
+    }
+    
+    .btnsArrumesRAN {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 0.3rem;
+    }
+    
+    .btnsArrumesRAN button {
+        width: 10rem;
+    }
+    
+    .btnsArrumes button {
+        width: 15rem;
+    }
+    
+    .RANBlock {
+        width: 100%;
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 3rem;
+        border-bottom: 1px solid #D5D5D5;
+    }
+    
+    
+    .blo2AcC {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        gap: 2rem;
+    }
+    
+    .boxShadow {
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, .16);
+    }
+    
+    .guardarArrumeBtn, .guardarRanBtn {
+        display: none;
+    }
+    
+    .totalContenedorFoto {
+        position: fixed;
+        width:100%;
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        top: 8rem;
+        left: 0;
+        z-index: 99;
+       
+    }
+    
+    .fotoAmpliada {
+        position: relative;
+        width: 50rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        z-index: 12;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    }
+    
+    .fotoAmpliada > img {
+        width: 500px;
+    }
+    
+    .equisFotos {
+        color: rgba(255, 255, 255, 0.3); ;
+    }
+    
+    .equisFotos:hover, .equisFotos:focus {
+        transform: scale(1.1);
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+}

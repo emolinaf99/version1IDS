@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Accidentes Contenedores</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Accidentes Contenedores</p></div>
+            <section class="infoArea">
+                
+                <div class="contenedorTotal">
+                    <h2 class="title-acc">Etapas</h2>
+                    <section class="contenedorOptsPEI">
+                        <button class="btnPiezas" id="btnInfoContainer" type="button">Información Contenedor</button>
+                        <button class="btnPiezas" id="btnInfoRanes" type="button">Información RANES</button>
+                        <button class="btnPiezas" id="btnRedirectInspection" type="button">Inspección</button>
+                    </section>
+    
+                    <%- include('./partials/infoContenedor.ejs') %>
+                    <%- include('./partials/infoRanes.ejs') %>
+                    
+                    
+                </div>
+
+            </section>
+        </section>
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+
+<!-- Script para redireccionar a inspección al dar clic en botón -->
+<script>
+    document.querySelector("#btnRedirectInspection").addEventListener("click",()=> {
+        window.location.pathname = "/formInspeccion"
+    })
+</script>
+
+<!-- Script para cambiar de vistas y resaltar la vista seleccionada -->
+<script>
+    // Declarando variables
+    const infoContenedor = document.getElementById("infoContenedorAccidentes");
+    const infoRanes = document.getElementById("infoRanes");
+    const btnPiezas = document.querySelectorAll(".btnPiezas")
+
+    // Ejecutando funciones
+    document.getElementById("btnInfoContainer").addEventListener("click",()=> {mostrarInfoPiezas(infoContenedor)})
+    document.getElementById("btnInfoRanes").addEventListener("click",()=> {mostrarInfoPiezas(infoRanes)})
+
+    const arrayPiezas = [infoContenedor,infoRanes];
+
+    // Funcion para mostrar vistas y ocultar las otras
+
+    function mostrarInfoPiezas (campo) {
+        let otroArray = arrayPiezas.filter((e) => {
+            if(e != campo) {
+                return e
+            }
+        })
+        otroArray.forEach((e) => {
+            e.style.display = "none"
+        })
+        campo.style.display = "flex"
+    }
+
+    // Para que cada vez que se seleccione una etapa cambie el borde de color
+
+    btnPiezas.forEach((btn)=> {
+        btn.addEventListener("click",()=> {
+            btnPiezas.forEach(boton => {
+                boton.style.border = "1px solid #D0D3D8"
+            })
+            btn.style.border = "2px solid #5B8FC8"
+        })
+    })
+
+</script>
+
+

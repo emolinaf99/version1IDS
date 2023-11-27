@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Consulta Ordenes de Trabajo TQC</title>
+</head>
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <section class="totalArea">
+            <div class="titlePage"><p>Consulta Ordenes de Trabajo TQC</p></div>
+            <section class="infoArea">
+                
+                <div class="contenedorTotal">
+                    <section class="contenedorGeneralConsultaPEI" id="infoConsultaInspecciones">
+                        <div class="contenedorFormularioIPEI" id="consultaInspeccionesInfo">
+                            <h1 id="h1Consulta">Búsqueda</h1>
+                            <div class="busqueda">
+                                <div class="barraBusquedaGroup">
+                                    <input class="barraBusqueda" type="search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <button class="filtrarBlock" type="button">Filtrar<i class="fa-solid fa-filter"></i></button>
+                            </div>                                          
+                        </div>
+                        
+                        <div class="contenedorFormularioIPEI2">
+                            <div class="titlePage asd"><p>Todas</p></div> 
+                    
+                            <!-- Por cada pieza ingresada en inspección el siguiente codigo -->
+                            <div class="contenedorPEIResultado" id="CPEIResOT">
+                                <div class="blockResultado1 brInfo">
+                                    <div class="renglonBl">
+                                        <p class="negrita">Numero: <span>678</span></p>
+                                        <p class="negrita">Empresa: <span>Tocaymo</span></p>
+                                    </div>
+                                    <div class="renglonBl">
+                                        <p class="negrita">Referencia: <span>751D19175R</span></p>
+                                        <p class="negrita">RAN: <span>751D19175R</span></p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="blockResultado2 blr2">
+                                    <a class="btnsResultados BGblue wdw15" href="/OT-TQC">Ver Resultados</a>
+                                    
+                                </div>
+                            </div> 
+                    
+                        </div>
+                    </section>
+                    <div class="contenedorFiltrar" id="busquedaAvanzadaInspecciones">
+                        <div class="titleMsgTemporal">
+                            <p>Búsqueda Avanzada</p>
+                            <i class="fa-solid fa-filter"></i>
+                            <p class="x">X</p>
+                        </div>
+                        <form class="formBusqueda" action="">
+                            <div class="fechaRango">
+                                <p>Fecha Entre:</p>
+                                <div class="fechaBlock">
+                                    <input class="inputBusquedaAvanzada" type="date" name="" id="">
+                                    <p>y</p>
+                                    <input class="inputBusquedaAvanzada" type="date" name="" id="">
+                                </div>
+                            </div>
+                            <div class="fechaBlock fechaBlock100">
+                                <label for="">Empresa:</label>
+                                <select class="inputBusquedaAvanzada" name="" id="">
+                                    <option value="">Opt 1</option>
+                                    <option value="">Opt 2</option>
+                                </select>
+                            </div>
+                            <div class="fechaBlock fechaBlock100">
+                                <label for="">Referencia:</label>
+                                <input class="inputBusquedaAvanzada" type="text" name="" id="">
+                            </div>
+                            <div class="fechaBlock fechaBlock100">
+                                <label for="">RAN:</label>
+                                <input class="inputBusquedaAvanzada" type="text" name="" id="">
+                            </div>
+                            <div class="fechaBlock fechaBlock100">
+                                <label for="">N° de Orden</label>
+                                <input class="inputBusquedaAvanzada" type="text" name="" id="">
+                            </div>
+                    
+                            <button class="btnSearch BGblue" type="button">Generar Resultados</button>
+                        </form>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                </div>
+
+            </section>
+        </section>
+        
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
+
+<!-- Script para mostrar cuadro busqueda avanzada en consulta de inspecciones -->
+<script>
+    const cuadroBusquedaAvanzadaConsultaInspecciones = document.querySelector("#busquedaAvanzadaInspecciones")
+    const ventanasEmergentes = document.querySelectorAll(".contenedorFiltrar")
+    const x = document.querySelectorAll(".x")
+    const btnFiltrar = document.querySelector(".filtrarBlock")
+    const fondoOscuro = document.querySelector(".opacityVentanas")
+
+    btnFiltrar.addEventListener("click",()=> {
+        fondoOscuro.style.display = "flex"
+        cuadroBusquedaAvanzadaConsultaInspecciones.style.display = "flex"
+    })
+
+    fondoOscuro.addEventListener("click",()=> {
+        ventanasEmergentes.forEach((ventana)=> {
+            ventana.style.display = "none"
+            fondoOscuro.style.display = "none"
+        })
+    })
+
+    x.forEach(una => {
+        una.addEventListener("click",()=> {
+            ventanasEmergentes.forEach((ventana)=> {
+                ventana.style.display = "none"
+                fondoOscuro.style.display = "none"
+            })
+        })
+    })
+
+
+</script>

@@ -1,0 +1,199 @@
+<section class="contenedorFormularioIPEI" id="ingresarPEIInfo">
+    <h1 class="mg">Ingresar Pieza a Inspección</h1>
+    <form class="needs-validation formIPEI" action="" onsubmit="enviar(this)" method="" name="" novalidate>
+        <div class="b1FormIPEI">
+            <div class="blockB1">
+                <label class="labelB1" for="">Referencia*</label>
+                <input required class="inputB1 form-control" type="text" name="" id="">
+            </div>
+            <div class="blockB1">
+                <label class="labelB1" for="">Descripción*</label>
+                <input disabled class="inputB1" type="text" name="" id="">
+            </div>
+            <div class="blockB1">
+                <label class="labelB1" for="">Proveedor*</label>
+                <input disabled class="inputB1" type="text" name="" id="">
+            </div>
+        </div>
+        <div class="vx">
+            <div class="b1FormIPEI" id="b2FormIPEI">
+                <div class="blockB1">
+                    <label class="labelB1" for="">Origen del Problema*</label>
+                    <select class="inputB1" name="" id="">
+                        <option value="">NaN</option>
+                    </select>
+                </div>
+                <div class="blockB1">
+                    <label class="labelB1" for="">N° GQE/LUP*</label>
+                    <select class="inputB1" name="" id="">
+                        <option value="">Sin GQE</option>
+                        <option value="">GQE</option>
+                    </select>
+                </div>
+                <div class="blockB1">
+                    <label class="labelB1" for="">Defecto*</label>
+                    <textarea class="textAreaDef" name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="b1FormIPEI" id="b2FormIPEI2">
+                <div class="blockB1">
+                    <label class="labelB1" for="">Responsable*</label>
+                    <select class="inputB1" name="" id="">
+                        <option value="">Persona1</option>
+                        <option value="">Persona2</option>
+                    </select>
+                </div>
+                <div class="blockB1">
+                    <label class="labelB1" for="">Tipo*</label>
+                    <select class="inputB1" name="" id="">
+                        <option value="">IN</option>
+                        <option value="">PC</option>
+                        <option value="">RT</option>
+                    </select>
+                </div>
+            </div>
+            <div class="b1FormIPEI" id="b2FormIPEI3">
+                <div class="blockB1" id="blockB3">
+                    <label class="labelB1" for="">Taller*</label>
+                    <div class="contCheckBox">
+                        <div class="blockCheckBox">
+                            <label for="">E</label>
+                            <input class="checkRadio" type="radio" class="inputB1" name="taller" id="" value="Ensamble">
+                        </div>
+                        <div class="blockCheckBox">
+                            <label for="">S</label>
+                            <input class="checkRadio" type="radio" class="inputB1" name="taller" id="" value="Soldadura">
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </input>
+                </div>
+                <div class="blockB1">
+                    <label class="labelB1" for="">Pais*</label>
+                    <select class="inputB1" name="" id="">
+                        <option value="">Colombia</option>
+                        <option value="">Australia</option>
+                        <option value="">Etc</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+        <div class="b3FormIPEI">
+            <div class="inpRadioContainer">
+                <div class="inpRadioBlock">
+                    <div class="blockLabel" id="blockLabelTransparent">
+                        <label class="labelRadio" for="piezaDeAspecto"></label>
+                    </div>
+                    <div class="blockInputs" id="blockInputTransparent">
+                        <p class="inputRadio" id="">Si</p>
+                        <p class="inputRadio" id="">No</p>
+                    </div>
+                </div>
+                <div class="inpRadioBlock">
+                    <div class="blockLabel">
+                        <label class="labelRadio" for="piezaDeAspecto">Pieza de aspecto?</label>
+                    </div>
+                    <div class="blockInputs">
+                        <input class="inputRadio" type="radio" name="piezaDeAspecto" id="" value="1">
+                    <input class="inputRadio" type="radio" name="piezaDeAspecto" id="" value="1">
+                    </div>
+                </div>
+                <div class="inpRadioBlock"> 
+                    <div class="blockLabel">
+                        <label class="labelRadio" for="CSR">CSR?</label>
+                    </div>
+                    <div class="blockInputs">
+                        <input class="inputRadio" type="radio" name="CRS" id="" value="1">
+                        <input class="inputRadio" type="radio" name="CRS" id="" value="1">
+                    </div>
+                </div>
+                <div class="inpRadioBlock">
+                    <div class="blockLabel">
+                        <label class="labelRadio" for="afectaCSR">Afecta CSR?</label>
+                    </div>
+                    <div class="blockInputs">
+                        <input class="inputRadio" type="radio" name="afectaCSR" id="" value="1">
+                        <input class="inputRadio" type="radio" name="afectaCSR" id="" value="1">
+                    </div>
+                </div>
+                
+                <div class="inpRadioBlock">
+                        <div class="blockLabel">
+                            <label class="labelRadio" for="modificaPieza">Se modifica la pieza?</label>                         
+                        </div>
+                        <div class="blockInputs">
+                            <input class="inputRadio" type="radio" name="modificaPieza" id="" value="1">
+                            <input class="inputRadio" type="radio" name="modificaPieza" id="" value="1">
+                        </div>
+                </div>
+            </div>
+            <div class="sec2Right">
+                <div class="containerX">
+                    <label class="labelB1" for="vehiculo"> Vehículo*</label>
+                    <div class="contCheckBox blockB1-2">
+                        <div class="blockCheckBox">
+                            <label for="">B52</label>
+                            <input class="checkRadio" type="checkbox" class="inputB1" name="vehiculo" id="" value="B52">
+                        </div>
+                        <div class="blockCheckBox">
+                            <label for="">L52</label>
+                            <input class="checkRadio" type="checkbox" class="inputB1" name="vehiculo" id="" value="L52">
+                        </div>
+                        <div class="blockCheckBox">
+                            <label for="">HJD</label>
+                            <input class="checkRadio" type="checkbox" class="inputB1" name="vehiculo" id="" value="HJD">
+                        </div>
+                    </div>
+                </div>
+                <div class="containerX">
+                    <div class="blockB1 blockB1-2" >
+                        <label class="labelB1" for="">Indicador Afectado*</label>
+                        <select class="inputB1" name="" id="">
+                            <option value="">Indicador 1</option>
+                            <option value="">Indicador 2</option>
+                            <option value="">Indicador 3</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="containerX">
+                    <div class="blockB1 blockB1-2" >
+                        <label class="labelB1" for="">Quien Paga*</label>
+                        <select class="inputB1" name="" id="">
+                            <option value="">Nadie</option>
+                            <option value="">Yo</option>
+                            <option value="">Usted</option>
+                        </select>
+                    </div>
+                </div>
+            
+            </div>
+
+        </div>
+        <div class="b3FormIPEI">
+            <div class="notContainer">
+                <label class="labelB1 blockB1-2" for="">Notíficación</label>
+                <select class="inputB1 blockB1-2" name="" id="">
+                    <option value="">Opt 1</option>
+                    <option value="">Opt 2</option>
+                </select>
+            </div>
+        </div>
+
+        <button class=" botonCrear BGgreen" type="submit">Ingresar</button>
+        
+    </form>                                                                         
+</section>
+
+<script>
+    /*
+    function enviar (form) {
+        if(validarFront(form)){
+            alert("CHECKEADO")
+        }
+    }*/
+
+</script>
